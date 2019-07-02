@@ -1,0 +1,21 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'main.blg'
+[58] biber-darwin:313> INFO - === Tue Jul  2, 2019, 00:24:35
+[82] Biber.pm:371> INFO - Reading 'main.bcf'
+[182] Biber.pm:857> INFO - Found 4 citekeys in bib section 0
+[196] Biber.pm:3976> INFO - Processing section 0
+[208] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[209] bibtex.pm:1500> INFO - LaTeX decoding ...
+[223] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
+[242] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/wpt0dMz8En/bibliography.bib_28495.utf8, line 8, warning: 1 characters of junk seen at toplevel
+[242] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/wpt0dMz8En/bibliography.bib_28495.utf8, line 18, warning: 1 characters of junk seen at toplevel
+[242] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/wpt0dMz8En/bibliography.bib_28495.utf8, line 25, warning: 1 characters of junk seen at toplevel
+[242] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/wpt0dMz8En/bibliography.bib_28495.utf8, line 34, warning: 1 characters of junk seen at toplevel
+[242] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/wpt0dMz8En/bibliography.bib_28495.utf8, line 43, warning: 1 characters of junk seen at toplevel
+[256] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[256] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[256] Biber.pm:3804> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[256] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[262] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[264] bbl.pm:720> INFO - Output to main.bbl
+[265] Biber.pm:110> INFO - WARNINGS: 5

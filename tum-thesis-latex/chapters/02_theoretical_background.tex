@@ -1,0 +1,173 @@
+% !TeX root = ../main.tex
+
+\chapter{Theoretical Background}\label{chapter:theoretical_background}
+
+\section{Natural Language Processing}
+\paragraph{Natural language processing }(NLP) is a subfield of computer science which focuses on, as implied by the name, processing of human (natural) languages. NLP enables us to make use of copious knowledge that is expressed in natural language. \parencite{ai_nlp} 
+
+
+In this section we will be taking a look at some NLP concepts that are relevant to us. 
+Most of the knowledge provided here is based on \parencite{nlp}.
+We will start with regular expressions, powerful tools able to catch text patterns. 
+Then we will be looking at information extraction from natural language. 
+Finally, we will finish this chapter on dialog systems and chatbot.
+
+\subsection{Regular Expressions}
+\paragraph{A regular expression}is formally defined as an algebraic notation that represents a specific set of strings.
+However, this representation is not explicit. 
+Regular expressions denote textual patterns which are able to produce implicit sets.
+These patterns are useful for searching in text.
+A regular expression search function finds every instance of text in the corpus that belongs to the pattern's implicit set.
+These instances are said to be 'matched' by the pattern.
+
+Regular expressions are supported in every computer language, word processor and text procesing tool. 
+However, there may be differeces in how they treat certain expressions. 
+Here, we will be treating expressions as they are shown in \parencite{nlp_re}.
+Another thing to keep in mind is that this is not a comprehensive guide for regular expression. 
+We will be looking at basics and some more complex operators we need for our specific problem. 
+
+\subsubsection{Basic Regular Expression Patterns}
+Simplest regular expressions are sequences of characters. 
+For example \texttt{snack} matches any string that contains the sequnce 'snack'. 
+Here are some examples that would be matched by this regular expression:\\
+"I just had a small \underline{snack}."\\
+"His username was 123\underline{snack}o."\\
+As we see, this regular expression only searches for the sequence 'snack'.
+Whether the found sequence actually is a word or not is irrelevant.
+
+The period \texttt{.} is treated as a special character: the wildcard.
+It matches any character, so for example \texttt{r.n} matches:\\
+"I \underline{ran} 5k today."\\
+"You better \underline{run}."\\
+Another special charcter is the question mark: \texttt{?}
+Adding a question mark after an element makes the element optional. 
+For example, \texttt{hours?} matches:\\
+"The \underline{hour} arm of the clock was missing."\\
+"I have been waiting for you for \underline{hours}."\\
+Special characters can also be used as regular characters.  
+We just need to put a backslash \texttt{\textbackslash} before the special character.
+For example, \texttt{Inc\textbackslash.} matches:\\
+"Monsters \underline{Inc.} was a great movie."
+
+\begin{table}[h]
+  \caption[Regular Expression Basics]{Regular Expression Basics}\label{tab:re_basic}		
+  \centering
+  \begin{tabular}{l l l}
+    Regular Expression&Match&Example\\ \toprule
+    \texttt{duck}&'duck'&\underline{duck}\\ \hline
+    \texttt{r.ck}&'r' and 'ck' with any character in between&\underline{rock}, \underline{rack}\\ \hline
+    \texttt{minutes?}&'minute' or 'minutes'&\underline{minute},\underline{minutes}\\ \hline
+    \texttt{\textbackslash?}&'?'&How\underline{?}\\ \hline
+  \end{tabular}
+\end{table}
+
+\subsubsection{Square Brackets, Range and Negation}
+
+It is important to note that regular expressions are case sensetive, so \texttt{meal} matches the first example, but not the second:\\
+"We had a tasty \underline{meal}."\\
+"Meal is ready."\\
+This problem is solved by the use of square brackets:\texttt{[]}.
+Square brackets signify a disjunction between the characters inside. 
+So \texttt{[Mm]} means either 'M' or 'm' and \texttt{[Mm]eal} matches both examples:\\
+"We had a tasty \underline{meal}."\\
+"\underline{Meal} is ready."\\
+Square brackets can be used for regular expression that match any digit \texttt{[1234567890]} or any letter \texttt{[abcdefghijklmnopqrstuvwxyz]}.
+However, for such common disjunctions we can also use the dash \texttt{-} operator.
+Dash operator denotes a range: \texttt{[0-9]} matches any digit between '0' and '9'.
+\texttt{[a-z]} and \texttt{[A-Z]} match any lowercase letter and any uppercase letter, respectively.
+
+Another use of square brackets is negation. 
+When a caret \texttt{\^} is the first character inside a bracket, any character other than the ones inside the brackets is matched.
+\texttt{[\^{}ab]} matches any character that is not 'a' or 'b'. 
+\texttt{[\^{}0-9]} matches any character that is not a digit.
+
+It is important to note that when used outside of these contexts, both dash \texttt{-} and caret \texttt{\^} have different meanings.
+Outside of the brackets, dash operator is treated as a character. 
+When the caret occurs in the brackets after the first character, it is also treated as a character.
+For example, \texttt{0-9} matches the first sentence but not the second:\\
+"Please enter a value between \underline{0-9}."\\
+"This course is worth 8 ECTS credits."\\
+
+\begin{table}[h]
+  \caption[Regular Expression Square Brackets]{Use of Square Brackets}\label{tab:re_sb}		
+  \centering
+  \begin{tabular}{l l l}
+    Regular Expression&Match&Example\\ \toprule
+    \texttt{[Ss]nack}&'Snack' or 'snack'&\underline{Snack},\underline{snack}\\ \hline
+    \texttt{[0-9]}&Any digit&\underline{5} missed calls!\\ \hline
+    \texttt{[\^{}abc]}&Any character that is not 'a','b' or 'c'&ca\underline{r}b\\ \hline
+    \texttt{[3\^{}2]}&'3','\^{}', or '2'&n\underline{\^{}}1 equals n\\ \hline
+  \end{tabular}
+\end{table}
+
+\subsubsection{Disjunction and Anchors}
+
+Now, with the help of square brackets, we are capable of basic disjunction between characters. 
+But what if we need a pattern that matches either 'meal' or 'snack'?
+\texttt{[mealsnack]} wouldn't work as square brackets denote character level disjunction. 
+What we need here is the pipe symbol \texttt{|}, the disjunction operator.
+\texttt{snack|meal} matches both of the following examples:\\
+"I need a \underline{snack}."\\
+"When was your last \underline{meal}"\\
+Next, we have the anchors: special characters that can specify locations in text.
+For example, the caret operator \texttt{\^{}} when used outside of brackets specify the start of a line.
+The dollar sign \texttt{\$} specifies the end of a line.
+So \texttt{\^{}I|\textbackslash?\$} matches any sentence that either starts with I or ends with a question mark:\\
+"\underline{I} thought we were gonna eat together."\\
+"Are you available for lunch \underline{?}\\
+We have two more anchors that we can make use of:
+\texttt{\textbackslash b} to match word boundries and \texttt{\textbackslash B} to match non-boundries.
+For example, \texttt{\textbackslash bsnack\textbackslash b} matches the first sentence, but not the second:\\
+"I just had a small \underline{snack}."\\
+"His username was 123snacko."\\
+To use these anchors, it is important to understand what a word means.
+In terms of regular expressions, a word is defined as any sequence of digits, letters or underscores.
+So \texttt{\textbackslash bap\textbackslash b} would match 'A\$\underline{ap}'.
+As \$ is neither a digit or a letter or underscore, it is treated as a word boundry.
+
+\begin{table}[h]
+  \caption[Regular Expression Disjunction and Anchors]{Disjunction and Anchors}\label{tab:re_sb}		
+  \centering
+  \begin{tabular}{l l l}
+    Regular Expression&Match&Example\\ \toprule
+    \texttt{eat|ate}&'eat' or 'ate'&I just \underline{ate}.\\ \hline
+    \texttt{\^{}\textbackslash .}&Any character at the start of a line&\underline{I} just ate.\\ \hline
+    \texttt{\textbackslash .\$}&Any character at the end of a line&I just ate\underline{.}\\ \hline
+    \texttt{\textbackslash b59\textbackslash b}&'59' between word boundries&It costs \$\underline{59}.99.\\ \hline
+    \texttt{\textbackslash B59\textbackslash B}&'59' between non-boundries&It costs \$2\underline{59}9.\\ \hline
+  \end{tabular}
+\end{table}
+
+\subsubsection{Kleene Operators, Grouping and Precedence}
+
+There are cases where we need to match repetetive patterns.
+For example, we might want to match any 'hey' with an arbitary amount of 'y's.
+To do this, we can use the Kleene Star \texttt{*}.
+Kleene star means "0 or more occurrences of the preceeding element".
+This means \texttt{y*} matches '','y','yy' and any other number of 'y' characters.
+So in order to match any 'hey' with an arbitary amount of 'y's, we would use \texttt{heyy*}.
+This use, however, is so common that we have another operator for it: the Kleene Plus \texttt{+}.
+Kleene Plus means "1 or more occurrences of the preceeding element".
+So \texttt{heyy*} and \texttt{hey+} are functionally equal.
+
+But what if we need to match a phrase such as as 'hahaha', which consists of an arbitary number of 'ha's?
+\texttt{ha+} wouldn't work, because the Kleene operator works on the preceeding element.
+So how can we set 'ha' as the preceeding element?
+This is where grouping comes into play.
+In regular expressions, grouping is done by wrapping a phrase in parantheses. 
+From then on, the phrase inside the parantheses is treated as a singular entity by operators outside the parantheses.
+\texttt{(ha)+} matches any 'ha', 'haha' and any number of repetitions of the phrase 'ha'.
+
+
+
+\subsubsection{More Operators}
+\subsubsection{Capture Groups}
+
+\subsection{Information Extraction}
+\subsection{Dialog Systems and Chatbots}
+\section{Machine Learning}
+\subsection{Basics of ML}
+\subsection{Relevant Models}
+\section{Nutrition}
+\subsection{Dietary Assesment}
+\subsection{Dietary Goals}

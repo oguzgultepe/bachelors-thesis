@@ -1,0 +1,150 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{nlp_re}{inbook}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3147296c99a3f829087becd1a4eaec08}{%
+           family={Jurafsky},
+           familyi={J\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f3a4f9a8d1680ae3a58cf8e47b015b7f}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{fullhash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{bibnamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authorbibnamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authornamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authorfullhash}{a44924f81290ad5ac383415b9d573fb0}
+      \field{labelalpha}{JM}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Speech and Language Processing}
+      \field{chapter}{2}
+      \field{edition}{3}
+      \field{pubstate}{inpreparation}
+      \field{title}{Regular Expressions, Text Normalization, and Edit Distance}
+    \endentry
+    \entry{nlp}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3147296c99a3f829087becd1a4eaec08}{%
+           family={Jurafsky},
+           familyi={J\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f3a4f9a8d1680ae3a58cf8e47b015b7f}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{fullhash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{bibnamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authorbibnamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authornamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authorfullhash}{a44924f81290ad5ac383415b9d573fb0}
+      \field{labelalpha}{JM}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{pubstate}{inpreparation}
+      \field{title}{Speech and Language Processing}
+    \endentry
+    \entry{latex}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=5d77435450d10a850a5b58577b9a456b}{%
+           family={Lamport},
+           familyi={L\bibinitperiod},
+           given={Leslie},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{fullhash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{bibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorbibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authornamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorfullhash}{5d77435450d10a850a5b58577b9a456b}
+      \field{labelalpha}{Lam94}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{LaTeX : A Documentation Preparation System User's Guide and Reference Manual}
+      \field{year}{1994}
+    \endentry
+    \entry{ai_nlp}{inbook}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=d6d1553382927100d0bb2b0b920e95d2}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Stuart\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5de798d5fa3c0236c0478134cd23f52a}{%
+           family={Norvig},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \strng{fullhash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \strng{bibnamehash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \strng{authorbibnamehash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \strng{authornamehash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \strng{authorfullhash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \field{labelalpha}{RN10}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Artificial Intelligene: A Modern Approach}
+      \field{chapter}{22}
+      \field{edition}{3}
+      \field{title}{Natural Language Processing}
+      \field{year}{2010}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1977,7 +1977,10 @@
     <bcf:citekey order="1">ai_nlp</bcf:citekey>
     <bcf:citekey order="2">nlp</bcf:citekey>
     <bcf:citekey order="3">nlp_re</bcf:citekey>
-    <bcf:citekey order="4">latex</bcf:citekey>
+    <bcf:citekey order="4">nlp_ie</bcf:citekey>
+    <bcf:citekey order="5">ISO8601</bcf:citekey>
+    <bcf:citekey order="6">nlp_chatbots</bcf:citekey>
+    <bcf:citekey order="7">latex</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

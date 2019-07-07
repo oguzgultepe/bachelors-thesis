@@ -13,7 +13,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {\relax 2.3}{\ignorespaces Regular Expression Disjunction and Anchors}}{5}{table.caption.10}
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {\relax 2.4}{\ignorespaces Regular Expression Operator Precedence Hierarchy}}{6}{table.caption.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 2.5}{\ignorespaces Regular Expression Kleene Operators and Grouping}}{6}{table.caption.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 2.6}{\ignorespaces Example Template For a Dinner Invitation}}{8}{table.caption.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 2.7}{\ignorespaces Example Frame for a Task-Oriented Dialog Agent}}{9}{table.caption.20}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -23,6 +29,8 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 7.1}{\ignorespaces Example table}}{11}{table.caption.20}
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 7.1}{\ignorespaces Example table}}{16}{table.caption.30}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

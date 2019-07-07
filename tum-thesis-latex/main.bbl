@@ -19,7 +19,29 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
-    \entry{nlp_re}{inbook}{}
+    \entry{ISO8601}{report}{}
+      \list{institution}{1}{%
+        {International Organization for Standardization}%
+      }
+      \list{location}{1}{%
+        {Geneva, CH}%
+      }
+      \field{labelalpha}{19}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{Date and time -- Representations for information interchange -- Part 1: Basic rules}
+      \field{type}{Standard}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/70907.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/70907.html
+      \endverb
+    \endentry
+    \entry{nlp_chatbots}{inbook}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=3147296c99a3f829087becd1a4eaec08}{%
            family={Jurafsky},
@@ -44,6 +66,72 @@
       \field{sortinit}{J}
       \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
       \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Speech and Language Processing}
+      \field{chapter}{24}
+      \field{edition}{3}
+      \field{pubstate}{inpreparation}
+      \field{title}{Dialog Systems and Chatbots}
+    \endentry
+    \entry{nlp_ie}{inbook}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3147296c99a3f829087becd1a4eaec08}{%
+           family={Jurafsky},
+           familyi={J\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f3a4f9a8d1680ae3a58cf8e47b015b7f}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{fullhash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{bibnamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authorbibnamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authornamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authorfullhash}{a44924f81290ad5ac383415b9d573fb0}
+      \field{labelalpha}{JM}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Speech and Language Processing}
+      \field{chapter}{18}
+      \field{edition}{3}
+      \field{pubstate}{inpreparation}
+      \field{title}{Information Extraction}
+    \endentry
+    \entry{nlp_re}{inbook}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3147296c99a3f829087becd1a4eaec08}{%
+           family={Jurafsky},
+           familyi={J\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f3a4f9a8d1680ae3a58cf8e47b015b7f}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{fullhash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{bibnamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authorbibnamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authornamehash}{a44924f81290ad5ac383415b9d573fb0}
+      \strng{authorfullhash}{a44924f81290ad5ac383415b9d573fb0}
+      \field{labelalpha}{JM}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extraalpha}{3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Speech and Language Processing}
@@ -76,7 +164,7 @@
       \field{labelalpha}{JM}
       \field{sortinit}{J}
       \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
-      \field{extraalpha}{2}
+      \field{extraalpha}{4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3}

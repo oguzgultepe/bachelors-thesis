@@ -22,7 +22,7 @@ These instances are said to be 'matched' by the pattern.
 
 Regular expressions are supported in every computer language, word processor and text procesing tool. 
 However, there may be differeces in how they treat certain expressions. 
-Here, we will be treating expressions as they are shown in \parencite{nlp_re}.
+As the knowledge provided here is based on \parencite{nlp_re}, we will be treating expressions as they are shown there.
 Another thing to keep in mind is that this is not a comprehensive guide for regular expression. 
 We will be looking at basics and some more complex operators we need for our specific problem. 
 
@@ -88,6 +88,10 @@ For example, \texttt{0-9} matches the first sentence but not the second:\\
 "Please enter a value between \underline{0-9}."\\
 "This course is worth 8 ECTS credits."\\
 
+There are some shorthands for commonly used ranges or disjunctions.
+\texttt{\textbackslash d} is equivalent to \texttt{[0-9]} and matches any digit. 
+\texttt{\textbackslash s} matches any whitespace. 
+
 \begin{table}[h]
   \caption[Regular Expression Square Brackets]{Use of Square Brackets}\label{tab:re_sb}		
   \centering
@@ -97,6 +101,8 @@ For example, \texttt{0-9} matches the first sentence but not the second:\\
     \texttt{[0-9]}&Any digit&\underline{5} missed calls!\\ \hline
     \texttt{[\^{}abc]}&Any character that is not 'a','b' or 'c'&ca\underline{r}b\\ \hline
     \texttt{[3\^{}2]}&'3','\^{}', or '2'&n\underline{\^{}}1 equals n\\ \hline
+    \texttt{\textbackslash d}&Any digit&\underline{5} missed calls!\\ \hline
+    \texttt{\textbackslash s}&Any whitespace&5\underline{ }missed\underline{ }calls!\\ \hline
   \end{tabular}
 \end{table}
 
@@ -126,7 +132,7 @@ So \texttt{\textbackslash bap\textbackslash b} would match 'A\$\underline{ap}'.
 As \$ is neither a digit or a letter or underscore, it is treated as a word boundry.
 
 \begin{table}[h]
-  \caption[Regular Expression Disjunction and Anchors]{Disjunction and Anchors}\label{tab:re_sb}		
+  \caption[Regular Expression Disjunction and Anchors]{Disjunction and Anchors}\label{tab:re_da}		
   \centering
   \begin{tabular}{l l l}
     Regular Expression&Match&Example\\ \toprule
@@ -153,18 +159,215 @@ So \texttt{heyy*} and \texttt{hey+} are functionally equal.
 But what if we need to match a phrase such as as 'hahaha', which consists of an arbitary number of 'ha's?
 \texttt{ha+} wouldn't work, because the Kleene operator works on the preceeding element.
 So how can we set 'ha' as the preceeding element?
+
 This is where grouping comes into play.
 In regular expressions, grouping is done by wrapping a phrase in parantheses. 
 From then on, the phrase inside the parantheses is treated as a singular entity by operators outside the parantheses.
 \texttt{(ha)+} matches any 'ha', 'haha' and any number of repetitions of the phrase 'ha'.
 
+Grouping also comes in handy when using the disjunction operator.
+For example, let's assume we need a regular expression that matches 'hour', 'minute', 'hours' and 'minutes'.
+We can't use \texttt{hour|minutes?}, because the disjunction is between \texttt{hour} and \texttt{minutes?}
+This is because the \texttt{?} is evaluated first, then the sequences and only then the disjunction. 
+Instead, we can use \texttt{(hours|minute)s?}. 
+This expression works since the parantheses are evaluated before all the other operators.
+
+The collection of rules determining which operator is evaluated first is called the operator precedence hierarchy.
+An operator x is said to have precedence over another operator y, if x is to be evaluated before y.
+Regular expression operator precedence hierarchy is as follows, from highest precedence to lowest precedence:\\
+
+\begin{table}[h]
+  \caption[Regular Expression Operator Precedence Hierarchy]{Regular Expression Operator Precedence Hierarchy}\label{tab:re_oph}
+  \centering
+  \begin{tabular}{l l l}
+    Parantheses&\texttt{()}&\\ \hline 
+    Counters&\texttt{* + ?}&\\ \hline 
+    Sequences and anchors&\texttt{seq \^{}I \textbackslash.\$}&\\ \hline 
+    Disjunction&\texttt{|}&\\ \hline 
+  \end{tabular}
+\end{table}
 
 
-\subsubsection{More Operators}
+\begin{table}[h]
+  \caption[Regular Expression Kleene Operators and Grouping]{Regular Expression Kleene Operators and Grouping}\label{tab:re_kog}
+  \centering
+  \begin{tabular}{l l l}
+    Regular Expression&Match&Example\\ \toprule
+    \texttt{b*}&0 or more repetitions of 'b'&aaa\underline{bbb}\\ \hline
+    \texttt{a+}&1 or more repetitions of 'a'&\underline{aaa}bbb\\ \hline
+    \texttt{(ab)+}&1 or more repetitions of 'ab'&aa\underline{ab}bb\\ \hline
+  \end{tabular}
+\end{table}
+
 \subsubsection{Capture Groups}
 
+Let's assume we have a list of names and we want to make sure all the names occur only once in the list. 
+The following regular expression accomplishes that:\\
+\texttt{\textbackslash b([A-Z][a-z]*)\textbackslash b.*\textbackslash b\textbackslash1\textbackslash b}\\
+When we use parantheses for grouping, the text that matches the expression inside is stored in the memory.
+This stored text is referred to as a capture group.
+Capture groups are numbered from left to right and can be referenced by the use of a backslash, followed by the group number. 
+
+When we need to group expressions but do not want to store the matches in the memory, we can use non-capturing groups.
+Adding \texttt{?:} after the opening paranthesis makes a group non capturing.
+
 \subsection{Information Extraction}
-\subsection{Dialog Systems and Chatbots}
+We have mentioned that massive amount of information is expressed in natural languages.
+The process of converting this information into a structured data format is called information extraction.
+In this subsection, we will be taking a look at information extraction techniques that are relevant to us.
+
+We will start with extracting temporal expressions from text. 
+We will continue with normalizing the extracted temporal expressions.
+Finally, we will end this subsection on template filling.
+
+Knowledge provided in this subsection is based on \parencite{nlp_ie}.
+
+\subsubsection{Extracting and Normalizing Temporal Expressions}
+Temporal expressions are parts of text that refer to durations or points in time.  
+Here, we will be focusing less on durations and more on points in time.
+Temporal expressions such as "17th of July" and "19.30" that directly refer to point in time are called absolute temporal expression. 
+Expressions such as "last week" and "2 hours ago" that refer to points in time in relation to some other point are called relative temporal expressions.
+
+
+In order to extract temporal information, we first need to find spans of text that contain temporal expressions.
+This task can be accomplished with the help of lexical triggers.
+Lexical triggers are textual phrases that imply the existence of a temporal expression.
+For example; yesterday, past, next or hour.
+It is possible to build automatas that search and find lexical triggers in text.
+Additional layers of automatas can be built over these in order to find the spans of temporal expressions based on the lexical triggers.
+
+After extraction, temporal expressions need to be normalized.
+This process includes mapping the expressions to points in time, be it a calendar date, a time of the day or both.
+This is fairly simple for absolute time expressions, as they refer to points in time directly.
+Relative temporal expressions, however, refer to points in time in relation to the document's temporal anchor.
+A document's temporal anchor is the point in time in which the documents is set. 
+This can for example be the date an article was published or the time a text message was sent.
+Based on the temporal anchor, relative temporal expressions can be mapped to points in time using temporal arithmetic.
+
+Finally, the points in time, which the temporal expressions were mapped to, must be saved in a standardized way.
+The standards for saving temporal expressions can be seen in \parencite{ISO8601}
+
+\subsubsection{Template Filling}
+Many times we have to deal with texts describing common and stereotypical events.
+These events usually follow certain patterns or have certain participants with certain roles.
+Our knowledge of these common events may come in handy in information extraction.
+For example, when we hear the following:\\
+"Would you like to join me for dinner at L'Osteria tomorrow at 8pm?"\\
+Even if we have never heard of L'Osteria, we can assume that it is a restaurant.
+This is because inviting somebody for a dinner is a common event which usually includes an inviter, invitee, a restaurant and a time.
+In a simple way, such common events can be represented as templates with fixed slots to fill.
+A template for a dinner invitation would look something like \autoref{tab:template}
+
+\begin{table}[h]
+  \caption[Example Template For a Dinner Invitation]{Example Template For a Dinner Invitation}\label{tab:template}
+  \centering
+  \begin{tabular}{l|l}
+    Key&Value\\ \toprule
+    Inviter&You\\ \hline
+    Invitee&Me\\ \hline
+    Restaurant&L'Osteria\\ \hline
+    Time&Tomorrow 8pm\\ \hline
+  \end{tabular}
+\end{table}
+
+Such templates make it easy to infer details that are not explicitly mentioned, such as the fact that L'Osteria is a restaurant.
+The task of template filling refers to finding the events that fit particular templates 
+and filling the associated templates with information extracted from the text.\
+
+\subsection{Dialog Systems}
+In this subsection, we will be talking about dialog systems.
+Dialog systems are programs use natural language to communicate with the user.
+In this subsection, we will first go through the difference between task-oriented dialog agents and chatbots.
+Next we will be taking a look at modern task-oriented dialog systems: frame based dialog agents.
+From there we will move on to the control structures for such dialog agents.
+Finally, we will end this section on slot filling for these dialog agents.
+The knowledge provided in this subsection is based on \parencite{nlp_chatbots}.
+
+\subsubsection{Task-Oriented Dialog Agents vs Chatbots}
+The words chatbot and dialog agents are often used interchangably by many people.
+However, in the context of NLP, this is a mistake.
+In NLP, chatbots refer to a distinct class of dialog agents, the other class being task-oriented dialog agents.
+So what is the difference between the two classes? 
+Let's start with task-oriented dialog agents.
+
+Task-oriented dialog agents are dialog systems build to -as the name suggest- serve specific tasks.
+These tasks can include for example finding restaurants, booking hotels or sending messages.
+Popular digital assistants such as Alexa and Siri fall under this category.
+Chatbots, on the other hand, are dialog agents without specific goals, built to mimic human conversation.
+
+Here we will be focusing on task based dialog agents rather than chatbots.
+
+\subsubsection{Frame Based Dialog Agents}
+What is a frame based dialog agent?
+In order to answer this question, we first need to understand some concepts.
+
+Domains are specific areas of knowledge or activity such as computer science or fishing.
+Domains are modelled by abstract constructs called domain ontologies.
+A domain ontology defines concepts and relations that belong to a domain.
+
+We build frames based on domain ontologies.
+A frame is a collection of slots that accept predefined types of values.
+The slots of a frame defines the information that the systems needs for the task.
+Dialog agents that are based on such frames are called frame based dialog agents.
+
+\autoref{tab:frame} shows an example frame for a task-oriented dialog agent designed to make reservations at a restaurant:
+
+\begin{table}[h]
+  \caption[Example Frame for a Task-Oriented Dialog Agent]{Example Frame for a Task-Oriented Dialog Agent}\label{tab:frame}
+  \centering
+  \begin{tabular}{l|l}
+    Slot&Type\\ \toprule
+    Restaurant&String\\ \hline
+    Number of People&Integer\\ \hline
+    Reservation Date&Date\\ \hline
+    Reservation Time&Time\\ \hline
+  \end{tabular}
+\end{table}
+
+\subsubsection{Control Structure for Frame Based Dialog}
+A task-oriented dialog agent needs to gather appopriate data to accomplish the task at hand.
+In order to achieve this, dialog systems implement control structures that guide the conversation.
+For a frame base dialog agent, the control structure is built around the frame.
+These control structures are usually finite-state automatas that are hand-designed for the task. 
+Take a look at \autoref{fig:control} for an example finite-state automata that is built around the frame shown at \autoref{tab:frame}.
+
+
+\usetikzlibrary{automata,positioning}
+\begin{figure}[h]
+  \centering
+  \caption[Example Finite-State Automata as Control-Structure]{Example Finite-State Automata as Control-Structure}\label{fig:control}
+  \begin{tikzpicture}
+    [node distance=1cm,
+    trim left=(0),
+    trim right=(0),
+    >=stealth,
+    shorten >=1pt,
+    auto,
+    every state/.style={
+      rectangle,
+      text width=8cm,
+      align = center,
+      draw=black!80,
+      fill=black!5,
+      very thick}
+    ]
+    \node (0) [state] {For which restaurant would you like to make a reservation?};
+    \node (1) [below=of 0] [state] {How many people will be present?};
+    \node (2) [below=of 1] [state] {For which day would you like to reserve?};
+    \node (3) [below=of 2] [state] {For what time would you like to reserve?};
+    \node (4) [below=of 3] [state] {Do you want to reserve a table for <NumberOfPeople> at <Restaurant> for <ReservationDate> at <ReservationTime>?};
+    \node (5) [below=of 4,yshift=-1cm] [rectangle] {Reserve the table!};
+    \path[->]
+      (0) edge (1)
+      (1) edge (2)
+      (2) edge (3)
+      (3) edge (4)
+      (4.south) edge[bend left=135, looseness=2.5] node [swap, pos=0.032] {No} (0.west)
+      (4) edge node [near start] {Yes} (5);
+  \end{tikzpicture}
+\end{figure}
+
+\subsubsection{NLU for Slot Filling}
 \section{Machine Learning}
 \subsection{Basics of ML}
 \subsection{Relevant Models}

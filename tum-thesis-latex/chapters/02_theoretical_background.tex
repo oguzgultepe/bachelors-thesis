@@ -49,7 +49,7 @@ We just need to put a backslash \texttt{\textbackslash} before the special chara
 For example, \texttt{Inc\textbackslash.} matches:\\
 "Monsters \underline{Inc.} was a great movie."
 
-\begin{table}[h]
+\begin{table}[htbp]
   \caption[Regular Expression Basics]{Regular Expression Basics}\label{tab:re_basic}		
   \centering
   \begin{tabular}{l l l}
@@ -86,13 +86,13 @@ Outside of the brackets, dash operator is treated as a character.
 When the caret occurs in the brackets after the first character, it is also treated as a character.
 For example, \texttt{0-9} matches the first sentence but not the second:\\
 "Please enter a value between \underline{0-9}."\\
-"This course is worth 8 ECTS credits."\\
+"This course is worth 8 ECTS credits."
 
 There are some shorthands for commonly used ranges or disjunctions.
 \texttt{\textbackslash d} is equivalent to \texttt{[0-9]} and matches any digit. 
 \texttt{\textbackslash s} matches any whitespace. 
 
-\begin{table}[h]
+\begin{table}[htbp]
   \caption[Regular Expression Square Brackets]{Use of Square Brackets}\label{tab:re_sb}		
   \centering
   \begin{tabular}{l l l}
@@ -131,7 +131,7 @@ In terms of regular expressions, a word is defined as any sequence of digits, le
 So \texttt{\textbackslash bap\textbackslash b} would match 'A\$\underline{ap}'.
 As \$ is neither a digit or a letter or underscore, it is treated as a word boundry.
 
-\begin{table}[h]
+\begin{table}[htbp]
   \caption[Regular Expression Disjunction and Anchors]{Disjunction and Anchors}\label{tab:re_da}		
   \centering
   \begin{tabular}{l l l}
@@ -174,9 +174,9 @@ This expression works since the parantheses are evaluated before all the other o
 
 The collection of rules determining which operator is evaluated first is called the operator precedence hierarchy.
 An operator x is said to have precedence over another operator y, if x is to be evaluated before y.
-Regular expression operator precedence hierarchy is as follows, from highest precedence to lowest precedence:\\
+Regular expression operator precedence hierarchy is as follows, from highest precedence to lowest precedence:
 
-\begin{table}[h]
+\begin{table}[htbp]
   \caption[Regular Expression Operator Precedence Hierarchy]{Regular Expression Operator Precedence Hierarchy}\label{tab:re_oph}
   \centering
   \begin{tabular}{l l l}
@@ -188,7 +188,7 @@ Regular expression operator precedence hierarchy is as follows, from highest pre
 \end{table}
 
 
-\begin{table}[h]
+\begin{table}[htbp]
   \caption[Regular Expression Kleene Operators and Grouping]{Regular Expression Kleene Operators and Grouping}\label{tab:re_kog}
   \centering
   \begin{tabular}{l l l}
@@ -258,7 +258,7 @@ This is because inviting somebody for a dinner is a common event which usually i
 In a simple way, such common events can be represented as templates with fixed slots to fill.
 A template for a dinner invitation would look something like \autoref{tab:template}
 
-\begin{table}[h]
+\begin{table}[htbp]
   \caption[Example Template For a Dinner Invitation]{Example Template For a Dinner Invitation}\label{tab:template}
   \centering
   \begin{tabular}{l|l}
@@ -279,8 +279,7 @@ In this subsection, we will be talking about dialog systems.
 Dialog systems are programs use natural language to communicate with the user.
 In this subsection, we will first go through the difference between task-oriented dialog agents and chatbots.
 Next we will be taking a look at modern task-oriented dialog systems: frame based dialog agents.
-From there we will move on to the control structures for such dialog agents.
-Finally, we will end this section on slot filling for these dialog agents.
+Finally, we will end this subsection on control structures for such dialog agents.
 The knowledge provided in this subsection is based on \parencite{nlp_chatbots}.
 
 \subsubsection{Task-Oriented Dialog Agents vs Chatbots}
@@ -312,7 +311,7 @@ Dialog agents that are based on such frames are called frame based dialog agents
 
 \autoref{tab:frame} shows an example frame for a task-oriented dialog agent designed to make reservations at a restaurant:
 
-\begin{table}[h]
+\begin{table}[htbp]
   \caption[Example Frame for a Task-Oriented Dialog Agent]{Example Frame for a Task-Oriented Dialog Agent}\label{tab:frame}
   \centering
   \begin{tabular}{l|l}
@@ -329,13 +328,32 @@ A task-oriented dialog agent needs to gather appopriate data to accomplish the t
 In order to achieve this, dialog systems implement control structures that guide the conversation.
 For a frame base dialog agent, the control structure is built around the frame.
 These control structures are usually finite-state automatas that are hand-designed for the task. 
-Take a look at \autoref{fig:control} for an example finite-state automata that is built around the frame shown at \autoref{tab:frame}.
 
+Let's consider the example frame shown at \autoref{tab:frame}.
+First, for each slot, we come up with an associated question that elicits an answer to fill the slot.
+\autoref{tab:questions} shows these questions for our example frame.
+
+\begin{table}[htbp]
+  \caption[Questions for the Example Frame]{Questions for the Example Frame}\label{tab:questions}
+  \centering
+  \begin{tabular}{l|l}
+    Slot&Question\\ \toprule
+    Restaurant&For which restaurant would you like to make a reservation?\\ \hline
+    Number of People&How many people will be present?\\ \hline
+    Reservation Date&For which day would you like to reserve?\\ \hline
+    Reservation Time&For what time would you like to reserve?\\ \hline
+  \end{tabular}
+\end{table}
+
+Based on these questions, we build a finites-state automata to guide the conversation.
+In this automata, questions are the states and user's answers are the transitions.
+Take a look at \autoref{fig:control} for an example finite-state automata that is built based on the questions at \autoref{tab:questions}.
 
 \usetikzlibrary{automata,positioning}
-\begin{figure}[h]
+\begin{figure}[htbp]
   \centering
   \caption[Example Finite-State Automata as Control-Structure]{Example Finite-State Automata as Control-Structure}\label{fig:control}
+  \scalebox{0.8}{
   \begin{tikzpicture}
     [node distance=1cm,
     trim left=(0),
@@ -364,10 +382,24 @@ Take a look at \autoref{fig:control} for an example finite-state automata that i
       (3) edge (4)
       (4.south) edge[bend left=135, looseness=2.5] node [swap, pos=0.032] {No} (0.west)
       (4) edge node [near start] {Yes} (5);
-  \end{tikzpicture}
+  \end{tikzpicture}}
 \end{figure}
 
-\subsubsection{NLU for Slot Filling}
+In our example, the conversation is controlled entirely by the automata.
+The user doesn't have much option other than answering the questions.
+This means that the user has no initiative; no control over the conversation.
+Systems where the user has no initiative such as the one shown at \autoref{fig:control} are called system-initiatives.
+The major advantage of system-initiative architecture is the fact that the system always knows what question is being answered.
+This alleviates the need to match answers with slots.
+It also allows for fine tuning the answer processing for the expected type of answer.
+However, such systems offer the user no flexibility.
+Consider the following input from the user:\\
+"I would like reserve a table at L'Osteria for tomorrow"\\
+This sentence already includes the information needed to fill two slots: Restaurant and Reservation Date.
+It is possible to augment a dialgo system with the ability to recognize such inputs, allowing for multiple slots to be filled at once.
+Such a system would pose the user questions for the empty slots, and simply skip the questions for the filled ones.
+These systems are called mixed-initiatives, as the user also holds some inititive to control the conversation.
+
 \section{Machine Learning}
 \subsection{Basics of ML}
 \subsection{Relevant Models}

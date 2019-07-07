@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.11)  7 JUL 2019 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.11)  7 JUL 2019 21:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1417,17 +1417,7 @@ Package microtype Info: Loading generic protrusion settings for font family
  [2
 
 
-] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 84--90
-
- []
-
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 175--178
-
- []
-
-[6] [7] [8] (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryautomata.code.tex
+] [3] [4] [5] [6] [7] [8] [9] (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryautomata.code.tex
 File: tikzlibraryautomata.code.tex 2008/07/14 v3.0.1a (rcs-revision 1.3)
  (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
 File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
@@ -1455,31 +1445,24 @@ File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 \pgfnodepartfivebox=\box80
 ))) (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
-)
-
-LaTeX Warning: Float too large for page by 93.65164pt on input line 368.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./chapters/03_methodology.tex [9] [10] [11]
+)) (./chapters/03_methodology.tex [10] [11] [12]
 chapter 3.
-) (./chapters/04_results.tex [12
+) (./chapters/04_results.tex [13
 
 
 ]
 chapter 4.
-) (./chapters/05_discussion.tex [13
+) (./chapters/05_discussion.tex [14
 
 
 ]
 chapter 5.
-) (./chapters/06_conclusion.tex [14
+) (./chapters/06_conclusion.tex [15
 
 
 ]
 chapter 6.
-) (./chapters/00_latex-guide.tex [15
+) (./chapters/00_latex-guide.tex [16
 
 
 ]
@@ -1491,16 +1474,16 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 86.
-) [16
+) [17
 
 
-] [17]
+] [18]
 Package tocbasic Info: character protrusion at lof deactivated on input line 53.
  (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [18
+ [19
 
 
 ]
@@ -1509,13 +1492,13 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 54.
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [19
+ [20
 
 
 ]
 chapter without number
 No complaints by nag.
-[20
+[21
 
 
 ]
@@ -1531,18 +1514,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50510 strings out of 492649
- 1128942 string characters out of 6129622
- 1768248 words of memory out of 5000000
- 53366 multiletter control sequences out of 15000+600000
- 573009 words of font info for 204 fonts, out of 8000000 for 9000
+ 50516 strings out of 492649
+ 1129000 string characters out of 6129622
+ 1768313 words of memory out of 5000000
+ 53367 multiletter control sequences out of 15000+600000
+ 573232 words of font info for 207 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  81i,19n,136p,10457b,2254s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (27 pages, 378701 bytes).
+Output written on main.pdf (28 pages, 380949 bytes).
 PDF statistics:
- 484 PDF objects out of 1000 (max. 8388607)
- 427 compressed objects within 5 object streams
- 110 named destinations out of 1000 (max. 500000)
+ 492 PDF objects out of 1000 (max. 8388607)
+ 434 compressed objects within 5 object streams
+ 111 named destinations out of 1000 (max. 500000)
  27495 words of extra memory for PDF output out of 29859 (max. 10000000)
 

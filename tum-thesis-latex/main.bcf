@@ -2002,7 +2002,11 @@
     <bcf:citekey order="25">homl:6</bcf:citekey>
     <bcf:citekey order="26">homl:7</bcf:citekey>
     <bcf:citekey order="27">homl:7</bcf:citekey>
-    <bcf:citekey order="28">latex</bcf:citekey>
+    <bcf:citekey order="28">homl:2</bcf:citekey>
+    <bcf:citekey order="29">homl:2</bcf:citekey>
+    <bcf:citekey order="30">ml:prml</bcf:citekey>
+    <bcf:citekey order="31">homl:2</bcf:citekey>
+    <bcf:citekey order="32">latex</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

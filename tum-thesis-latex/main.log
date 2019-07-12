@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.11)  12 JUL 2019 20:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.11)  12 JUL 2019 21:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1446,7 +1446,7 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 <figures/svm.png, id=380, 505.89pt x 364.36125pt>
 File: figures/svm.png Graphic file (type png)
 <use figures/svm.png>
-Package pdftex.def Info: figures/svm.png  used on input line 470.
+Package pdftex.def Info: figures/svm.png  used on input line 469.
 (pdftex.def)             Requested size: 209.12778pt x 150.62332pt.
  [13] [14 <./figures/svm.png>]) (./chapters/03_methodology.tex [15]
 chapter 3.
@@ -1503,35 +1503,36 @@ chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-No complaints by nag.
 [24
 
 
 ]
+No complaints by nag.
+[25]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F12886DBD2BCB3F6DBDF37C538140C0E;2353.
+(rerunfilecheck)             Checksum: C4BC767B37B22C3C650D27971674CC49;2353.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50645 strings out of 492649
- 1130834 string characters out of 6129622
- 1771026 words of memory out of 5000000
- 53431 multiletter control sequences out of 15000+600000
- 581998 words of font info for 242 fonts, out of 8000000 for 9000
+ 50658 strings out of 492649
+ 1131020 string characters out of 6129622
+ 1771114 words of memory out of 5000000
+ 53438 multiletter control sequences out of 15000+600000
+ 582455 words of font info for 246 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  81i,19n,136p,10457b,3150s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (31 pages, 455269 bytes).
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (32 pages, 464164 bytes).
 PDF statistics:
- 552 PDF objects out of 1000 (max. 8388607)
- 485 compressed objects within 5 object streams
- 127 named destinations out of 1000 (max. 500000)
+ 564 PDF objects out of 1000 (max. 8388607)
+ 495 compressed objects within 5 object streams
+ 128 named destinations out of 1000 (max. 500000)
  33620 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -67,11 +67,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Data Preprocessing}{15}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Feature Extraction}{15}{section*.31}
+\contentsline {subsubsection}{\nonumberline Cross Validation}{15}{section*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Cross Validation}{15}{section*.32}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Hyper Parameter Optimization}{15}{section*.33}
+\contentsline {subsubsection}{\nonumberline Hyperparameter Optimization}{15}{section*.32}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Methodology}{16}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -79,15 +77,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.1}Design}{16}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Chatbot Architecture}{16}{section*.34}
+\contentsline {subsubsection}{\nonumberline Chatbot Architecture}{16}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Information Extraction}{16}{section*.35}
+\contentsline {subsubsection}{\nonumberline Information Extraction}{16}{section*.34}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.2}Telegram Integration}{16}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline python-telegram-bot Library}{16}{section*.36}
+\contentsline {subsubsection}{\nonumberline python-telegram-bot Library}{16}{section*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Implementation}{16}{section*.37}
+\contentsline {subsubsection}{\nonumberline Implementation}{16}{section*.36}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Machine Learning}{16}{section.3.2}
 \defcounter {refsection}{0}\relax 
@@ -121,8 +119,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.1.1}Subsection}{20}{subsection.7.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Figures}{22}{chapter*.42}
+\contentsline {chapter}{\nonumberline List of Figures}{22}{chapter*.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Tables}{23}{chapter*.43}
+\contentsline {chapter}{\nonumberline List of Tables}{23}{chapter*.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{24}{chapter*.44}
+\contentsline {chapter}{\nonumberline Bibliography}{24}{chapter*.43}

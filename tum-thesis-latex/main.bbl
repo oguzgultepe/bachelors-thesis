@@ -144,7 +144,7 @@
       \field{title}{Decision Trees}
       \field{year}{2017}
     \endentry
-    \entry{homl:7}{inbook}{}
+    \entry{homl:2}{inbook}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
            family={Géron},
@@ -165,6 +165,36 @@
       \field{sortinit}{G}
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Hands-On Machine Learning with Scikit-Learn and TensorFlow}
+      \field{chapter}{2}
+      \field{title}{End-to-End Machine Learning Project}
+      \field{year}{2017}
+    \endentry
+    \entry{homl:7}{inbook}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
+           family={Géron},
+           familyi={G\bibinitperiod},
+           given={Aurélien},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Inc.}%
+      }
+      \strng{namehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{fullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{bibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorbibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authornamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradate}{3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
@@ -194,7 +224,7 @@
       \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
       \field{sortinit}{G}
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
-      \field{extradate}{3}
+      \field{extradate}{4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
@@ -222,7 +252,7 @@
       \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
       \field{sortinit}{G}
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
-      \field{extradate}{4}
+      \field{extradate}{5}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
@@ -252,7 +282,7 @@
       \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
       \field{sortinit}{G}
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
-      \field{extradate}{5}
+      \field{extradate}{6}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}

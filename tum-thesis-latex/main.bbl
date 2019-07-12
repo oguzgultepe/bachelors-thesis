@@ -18,7 +18,250 @@
 
 
 \refsection{0}
-  \datalist[entry]{anyt/global//global/global}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{ml:prml}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=f092f589860326a712a3322c4b6cc6b7}{%
+           family={Bishop},
+           familyi={B\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f092f589860326a712a3322c4b6cc6b7}
+      \strng{fullhash}{f092f589860326a712a3322c4b6cc6b7}
+      \strng{bibnamehash}{f092f589860326a712a3322c4b6cc6b7}
+      \strng{authorbibnamehash}{f092f589860326a712a3322c4b6cc6b7}
+      \strng{authornamehash}{f092f589860326a712a3322c4b6cc6b7}
+      \strng{authorfullhash}{f092f589860326a712a3322c4b6cc6b7}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Pattern Recognition and Machine Learning}
+      \field{year}{2006}
+    \endentry
+    \entry{svm_pic}{article}{}
+      \name{author}{7}{}{%
+        {{uniquename=0,uniquepart=base,hash=2289f7d3d45027b5db0665e2d399b0f6}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Shou-Tung},
+           giveni={S\bibinithyphendelim T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=af64abd11591a83eaaf161ed3c0fc070}{%
+           family={Hsiao},
+           familyi={H\bibinitperiod},
+           given={Yi-Hsuan},
+           giveni={Y\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=683b27d328dd20614d28940f512f754e}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Yu-Len},
+           giveni={Y\bibinithyphendelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=7bc3bce8a6e0471931260cd2e6a3e505}{%
+           family={Kuo},
+           familyi={K\bibinitperiod},
+           given={Shou-Jen},
+           giveni={S\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=074ac1bc9d9b7905e8bad176bbe0fa50}{%
+           family={Tseng},
+           familyi={T\bibinitperiod},
+           given={Hsin-Shun},
+           giveni={H\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3bec782af7116e98ddad33181b6dd9f9}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Hwa-Koon},
+           giveni={H\bibinithyphendelim K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3a1b6ed758587f10ded92aa5804fdd75}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Dar-Ren},
+           giveni={D\bibinithyphendelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{27c8c875556669d79b2ac14a08ccc810}
+      \strng{fullhash}{bac356dd06aa72cd3cbd47d2757055f4}
+      \strng{bibnamehash}{bac356dd06aa72cd3cbd47d2757055f4}
+      \strng{authorbibnamehash}{bac356dd06aa72cd3cbd47d2757055f4}
+      \strng{authornamehash}{27c8c875556669d79b2ac14a08ccc810}
+      \strng{authorfullhash}{bac356dd06aa72cd3cbd47d2757055f4}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Korean journal of radiology : official journal of the Korean Radiological Society}
+      \field{month}{08}
+      \field{title}{Comparative Analysis of Logistic Regression, Support Vector Machine and Artificial Neural Network for the Differential Diagnosis of Benign and Malignant Solid Breast Tumors by the Use of Three-Dimensional Power Doppler Imaging}
+      \field{volume}{10}
+      \field{year}{2009}
+      \field{pages}{464\bibrangedash 71}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.3348/kjr.2009.10.5.464
+      \endverb
+    \endentry
+    \entry{homl:6}{inbook}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
+           family={Géron},
+           familyi={G\bibinitperiod},
+           given={Aurélien},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Inc.}%
+      }
+      \strng{namehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{fullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{bibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorbibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authornamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Hands-On Machine Learning with Scikit-Learn and TensorFlow}
+      \field{chapter}{6}
+      \field{title}{Decision Trees}
+      \field{year}{2017}
+    \endentry
+    \entry{homl:7}{inbook}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
+           family={Géron},
+           familyi={G\bibinitperiod},
+           given={Aurélien},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Inc.}%
+      }
+      \strng{namehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{fullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{bibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorbibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authornamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Hands-On Machine Learning with Scikit-Learn and TensorFlow}
+      \field{chapter}{7}
+      \field{title}{Ensemble Learning and Random Forests}
+      \field{year}{2017}
+    \endentry
+    \entry{ml:homl}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
+           family={Géron},
+           familyi={G\bibinitperiod},
+           given={Aurélien},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Inc.}%
+      }
+      \strng{namehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{fullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{bibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorbibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authornamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hands-On Machine Learning with Scikit-Learn and TensorFlow}
+      \field{year}{2017}
+    \endentry
+    \entry{homl:5}{inbook}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
+           family={Géron},
+           familyi={G\bibinitperiod},
+           given={Aurélien},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Inc.}%
+      }
+      \strng{namehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{fullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{bibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorbibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authornamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Hands-On Machine Learning with Scikit-Learn and TensorFlow}
+      \field{chapter}{5}
+      \field{title}{Support Vector Machines}
+      \field{year}{2017}
+    \endentry
+    \entry{homl:4}{inbook}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
+           family={Géron},
+           familyi={G\bibinitperiod},
+           given={Aurélien},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Inc.}%
+      }
+      \strng{namehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{fullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{bibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorbibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authornamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Hands-On Machine Learning with Scikit-Learn and TensorFlow}
+      \field{chapter}{4}
+      \field{title}{Training Models}
+      \field{year}{2017}
+    \endentry
     \entry{ISO8601}{report}{}
       \list{institution}{1}{%
         {International Organization for Standardization}%
@@ -26,9 +269,10 @@
       \list{location}{1}{%
         {Geneva, CH}%
       }
-      \field{labelalpha}{19}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labeltitlesource}{title}
       \field{month}{2}
       \field{title}{Date and time -- Representations for information interchange -- Part 1: Basic rules}
@@ -62,10 +306,10 @@
       \strng{authorbibnamehash}{a44924f81290ad5ac383415b9d573fb0}
       \strng{authornamehash}{a44924f81290ad5ac383415b9d573fb0}
       \strng{authorfullhash}{a44924f81290ad5ac383415b9d573fb0}
-      \field{labelalpha}{JM}
       \field{sortinit}{J}
       \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
-      \field{extraalpha}{1}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Speech and Language Processing}
@@ -95,10 +339,10 @@
       \strng{authorbibnamehash}{a44924f81290ad5ac383415b9d573fb0}
       \strng{authornamehash}{a44924f81290ad5ac383415b9d573fb0}
       \strng{authorfullhash}{a44924f81290ad5ac383415b9d573fb0}
-      \field{labelalpha}{JM}
       \field{sortinit}{J}
       \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
-      \field{extraalpha}{2}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Speech and Language Processing}
@@ -128,10 +372,10 @@
       \strng{authorbibnamehash}{a44924f81290ad5ac383415b9d573fb0}
       \strng{authornamehash}{a44924f81290ad5ac383415b9d573fb0}
       \strng{authorfullhash}{a44924f81290ad5ac383415b9d573fb0}
-      \field{labelalpha}{JM}
       \field{sortinit}{J}
       \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
-      \field{extraalpha}{3}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Speech and Language Processing}
@@ -161,10 +405,10 @@
       \strng{authorbibnamehash}{a44924f81290ad5ac383415b9d573fb0}
       \strng{authornamehash}{a44924f81290ad5ac383415b9d573fb0}
       \strng{authorfullhash}{a44924f81290ad5ac383415b9d573fb0}
-      \field{labelalpha}{JM}
       \field{sortinit}{J}
       \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
-      \field{extraalpha}{4}
+      \field{extradate}{4}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3}
@@ -189,13 +433,51 @@
       \strng{authorbibnamehash}{5d77435450d10a850a5b58577b9a456b}
       \strng{authornamehash}{5d77435450d10a850a5b58577b9a456b}
       \strng{authorfullhash}{5d77435450d10a850a5b58577b9a456b}
-      \field{labelalpha}{Lam94}
       \field{sortinit}{L}
       \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{LaTeX : A Documentation Preparation System User's Guide and Reference Manual}
       \field{year}{1994}
+    \endentry
+    \entry{ai:ml}{inbook}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=d6d1553382927100d0bb2b0b920e95d2}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Stuart\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5de798d5fa3c0236c0478134cd23f52a}{%
+           family={Norvig},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \strng{fullhash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \strng{bibnamehash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \strng{authorbibnamehash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \strng{authornamehash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \strng{authorfullhash}{d7352f76aabd2f7c8edfc679d6ad964a}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Artificial Intelligene: A Modern Approach}
+      \field{chapter}{18}
+      \field{edition}{3}
+      \field{title}{Learning From Examples}
+      \field{year}{2010}
     \endentry
     \entry{ai_nlp}{inbook}{}
       \name{author}{2}{}{%
@@ -221,9 +503,11 @@
       \strng{authorbibnamehash}{d7352f76aabd2f7c8edfc679d6ad964a}
       \strng{authornamehash}{d7352f76aabd2f7c8edfc679d6ad964a}
       \strng{authorfullhash}{d7352f76aabd2f7c8edfc679d6ad964a}
-      \field{labelalpha}{RN10}
       \field{sortinit}{R}
       \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Artificial Intelligene: A Modern Approach}

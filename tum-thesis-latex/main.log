@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.11)  7 JUL 2019 21:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.11)  12 JUL 2019 20:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -268,7 +268,7 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 File: blx-dm.def 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'alphabetic.dbx' not found.
+Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count145
@@ -370,10 +370,10 @@ File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
 \c@biburllcpenalty=\count284
 \c@smartand=\count285
 )
-Package biblatex Info: Trying to load bibliography style 'alphabetic'...
-Package biblatex Info: ... file 'alphabetic.bbx' found.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/alphabetic.bbx
-File: alphabetic.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
@@ -381,10 +381,10 @@ File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count286
 \c@bbx:relatedtotal=\count287
 ))
-Package biblatex Info: Trying to load citation style 'alphabetic'...
-Package biblatex Info: ... file 'alphabetic.cbx' found.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/cbx/alphabetic.cbx
-File: alphabetic.cbx 2018/03/04 v3.11 biblatex citation style (PK/MW)
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2018/03/04 v3.11 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -392,9 +392,6 @@ Package biblatex Info: Redefining '\footcitetext'.
 Package biblatex Info: Redefining '\smartcite'.
 Package biblatex Info: Redefining '\textcite'.
 Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
@@ -1185,7 +1182,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip90
 )
-Package tocbasic Info: defining new hook before heading of `toc' on input line 35.
+Package tocbasic Info: defining new hook before heading of `toc' on input line 34.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1316,14 +1313,14 @@ LaTeX Info: Redefining \nameref on input line 22.
 Package nag Info: Command \hc@caption not defined, skipping amendment on input line 22.
 Package nag Info: Command \topcaption not defined, skipping amendment on input line 22.
  (./pages/cover.tex
-<logos/tum.pdf, id=175, 54.02504pt x 28.452pt>
+<logos/tum.pdf, id=163, 54.02504pt x 28.452pt>
 File: logos/tum.pdf Graphic file (type pdf)
 <use logos/tum.pdf>
 Package pdftex.def Info: logos/tum.pdf  used on input line 16.
 (pdftex.def)             Requested size: 108.06296pt x 56.9055pt.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 28.
-<logos/faculty.pdf, id=176, 597.50786pt x 845.01837pt>
+<logos/faculty.pdf, id=164, 597.50786pt x 845.01837pt>
 File: logos/faculty.pdf Graphic file (type pdf)
 <use logos/faculty.pdf>
 Package pdftex.def Info: logos/faculty.pdf  used on input line 36.
@@ -1445,24 +1442,30 @@ File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 \pgfnodepartfivebox=\box80
 ))) (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
-)) (./chapters/03_methodology.tex [10] [11] [12]
+) [10] [11] [12]
+<figures/svm.png, id=380, 505.89pt x 364.36125pt>
+File: figures/svm.png Graphic file (type png)
+<use figures/svm.png>
+Package pdftex.def Info: figures/svm.png  used on input line 470.
+(pdftex.def)             Requested size: 209.12778pt x 150.62332pt.
+ [13] [14 <./figures/svm.png>]) (./chapters/03_methodology.tex [15]
 chapter 3.
-) (./chapters/04_results.tex [13
+) (./chapters/04_results.tex [16
 
 
 ]
 chapter 4.
-) (./chapters/05_discussion.tex [14
+) (./chapters/05_discussion.tex [17
 
 
 ]
 chapter 5.
-) (./chapters/06_conclusion.tex [15
+) (./chapters/06_conclusion.tex [18
 
 
 ]
 chapter 6.
-) (./chapters/00_latex-guide.tex [16
+) (./chapters/00_latex-guide.tex [19
 
 
 ]
@@ -1474,16 +1477,16 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 86.
-) [17
+) [20
 
 
-] [18]
+] [21]
 Package tocbasic Info: character protrusion at lof deactivated on input line 53.
  (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [19
+ [22
 
 
 ]
@@ -1492,13 +1495,16 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 54.
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [20
+ [23
 
 
 ]
 chapter without number
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplx/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
 No complaints by nag.
-[21
+[24
 
 
 ]
@@ -1508,24 +1514,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8ED7A4EBE1954CDCA3B4246AE2A8B053;2515.
+(rerunfilecheck)             Checksum: F12886DBD2BCB3F6DBDF37C538140C0E;2353.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50516 strings out of 492649
- 1129000 string characters out of 6129622
- 1768313 words of memory out of 5000000
- 53367 multiletter control sequences out of 15000+600000
- 573232 words of font info for 207 fonts, out of 8000000 for 9000
+ 50645 strings out of 492649
+ 1130834 string characters out of 6129622
+ 1771026 words of memory out of 5000000
+ 53431 multiletter control sequences out of 15000+600000
+ 581998 words of font info for 242 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 81i,19n,136p,10457b,2254s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (28 pages, 380949 bytes).
+ 81i,19n,136p,10457b,3150s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (31 pages, 455269 bytes).
 PDF statistics:
- 492 PDF objects out of 1000 (max. 8388607)
- 434 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
- 27495 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 552 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 33620 words of extra memory for PDF output out of 35830 (max. 10000000)
 

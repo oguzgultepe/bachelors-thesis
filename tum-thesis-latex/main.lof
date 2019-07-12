@@ -9,7 +9,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Example Finite-State Automata as Control-Structure}}{11}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces A Support Vector Machine \parencite {svm_pic}\relax }}{14}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -19,10 +19,12 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Example drawing}}{17}{figure.caption.31}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Example plot}}{18}{figure.caption.32}
+\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Example drawing}}{20}{figure.caption.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.3}{\ignorespaces Example listing}}{18}{figure.caption.33}
+\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Example plot}}{21}{figure.caption.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 7.3}{\ignorespaces Example listing}}{21}{figure.caption.41}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

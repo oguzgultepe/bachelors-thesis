@@ -110,7 +110,7 @@ There are some shorthands for commonly used ranges or disjunctions.
 
 Now, with the help of square brackets, we are capable of basic disjunction between characters. 
 But what if we need a pattern that matches either 'meal' or 'snack'?
-\texttt{[mealsnack]} wouldn't work as square brackets denote character level disjunction. 
+\texttt{[mealsnack]} would not work as square brackets denote character level disjunction. 
 What we need here is the pipe symbol \texttt{|}, the disjunction operator.
 \texttt{snack|meal} matches both of the following examples:\\
 "I need a \underline{snack}."\\
@@ -157,7 +157,7 @@ Kleene Plus means "1 or more occurrences of the preceeding element".
 So \texttt{heyy*} and \texttt{hey+} are functionally equal.
 
 But what if we need to match a phrase such as as 'hahaha', which consists of an arbitary number of 'ha's?
-\texttt{ha+} wouldn't work, because the Kleene operator works on the preceeding element.
+\texttt{ha+} would not work, because the Kleene operator works on the preceeding element.
 So how can we set 'ha' as the preceeding element?
 
 This is where grouping comes into play.
@@ -167,7 +167,7 @@ From then on, the phrase inside the parantheses is treated as a singular entity 
 
 Grouping also comes in handy when using the disjunction operator.
 For example, let's assume we need a regular expression that matches 'hour', 'minute', 'hours' and 'minutes'.
-We can't use \texttt{hour|minutes?}, because the disjunction is between \texttt{hour} and \texttt{minutes?}
+We ca not use \texttt{hour|minutes?}, because the disjunction is between \texttt{hour} and \texttt{minutes?}
 This is because the \texttt{?} is evaluated first, then the sequences and only then the disjunction. 
 Instead, we can use \texttt{(hours|minute)s?}. 
 This expression works since the parantheses are evaluated before all the other operators.
@@ -386,7 +386,7 @@ Take a look at \autoref{fig:control} for an example finite-state automata that i
 \end{figure}
 
 In our example, the conversation is controlled entirely by the automata.
-The user doesn't have much option other than answering the questions.
+The user does not have much option other than answering the questions.
 This means that the user has no initiative; no control over the conversation.
 Systems where the user has no initiative such as the one shown at \autoref{fig:control} are called system-initiatives.
 The major advantage of system-initiative architecture is the fact that the system always knows what question is being answered.
@@ -399,10 +399,126 @@ This sentence already includes the information needed to fill two slots: Restaur
 It is possible to augment a dialgo system with the ability to recognize such inputs, allowing for multiple slots to be filled at once.
 Such a system would pose the user questions for the empty slots, and simply skip the questions for the filled ones.
 These systems are called mixed-initiatives, as the user also holds some inititive to control the conversation.
-
+\newpage
 \section{Machine Learning}
-\subsection{Basics of ML}
+Machine Learning is the science (and art) of programming computers so they can learn from data. \parencite{ml:homl}
+In this section, we will take a look at some machine learning concepts that are relevant to this thesis.
+We will start with basics of ML, explaining some basic terminology. 
+Afterwards we will take a brief look at the models used in the thesis.
+Finally, we will end the section on some additional relevant concepts.
+Machine learning is a broad subject with many subcategories.
+Here we will be focusing on supervised learning; learning from labeled data.
+
+\subsection{Basics of Machine Learning}
+How does a program learn from labeled data?
+Assume we have a dataset consisting of N input-output pairs such as the following:
+ 
+$(x_1,y_1), (x_2,y_2), \ldots, (x_n,y_n)$
+
+For any of these pairs, we call the input value $x_i$ the predictor and the $y_i$ the labels.\parencite{ml:homl}
+Supervised learning is based on the assumption that there is function dependency between the predictors and the labels.
+This functional dependency can be modeled as $f(x_i)=y_i$, where $f$ is called the true function.
+The goal of the supervised learning is to construct a function $h$ -called hypothesis- that approximates the true function $f$.
+In general, we split supervised learning instances into two groups: classification and regression. 
+Classification refers to the instances where the labels are selected from a finite set of values (such as cat, dog or cow).
+Regression on the other hand refers to the instances where the labels are numeric values (such as 0, 10 or 42). \parencite{ai:ml}
+
+We usually construct hypotheses by training models on the data.
+But what does it mean to train a model on the data?
+To explain this we need to understand what a loss function is:
+A loss (or cost) function is a function that maps models to numeric values.
+Specifically, a loss function tells us how much our model fails to explain some data.
+In this context, training means tuning the adaptive parameters of a model in order to minimize the loss function. \parencite{ml:prml}
+
+We are of course interested in models that are capable of explaining more than just the training data.
+We want to see if the model generalizes well; if it can accurately predict labels for previously unseen inputs.
+Becuase of this we test the trained models on heldout data.
+Usually, we split our data into three distinct sets: training set, validation set, and test set.
+We train our models on the training set, compare them using the validation set and report the performance of the final model on the test set.
+It is important that the test set is held out during the training phase.
+Otherwise it is not possible to see if the model generalizes well or just memorizes the data.\parencite{ml:prml}
+
 \subsection{Relevant Models}
-\section{Nutrition}
-\subsection{Dietary Assesment}
-\subsection{Dietary Goals}
+Let's take a brief look at some popular machine learning models.
+\subsubsection{Linear Regression}
+A linear regression model is a linear function of the input variabes.
+It corresponds to a weighted sum of the input features plus a constant called the bias term.\parencite{homl:4}
+For example, a linear regression model for a dataset with two input features would look like this:
+
+$f(x_i)=\theta_{0} + \theta_{1}x_{i1} + \theta_{2}x_{i2}=y_i$
+
+For more information on linear regression models, please refer to \parencite{homl:4}.
+
+\subsubsection{Ridge Regression}
+Ridge regression is very similar to linear regression. 
+The only difference is that ridge regression adds a regularization term $a\sum_{i=1}^{n}{\theta_{}^{2}}$ to the cost function. 
+This penalizes large weight in order to prevent overfitting, a phenomenon where a model memorizes the data instead of generalizing over it.\parencite{homl:4}
+
+$a$ is called the regularization strength and determines how much the large weights get penalized.
+Regularization strength is a hyperparameter, a parameter that is set before the learning process and is not optimized over the data.\parencite{homl:4}
+
+More information about ridge regression can be found at \parencite{homl:4}
+
+\subsubsection{Support Vector Machines}
+Support Vector Machines construct hyperplanes that act as decision boundries between classes.
+What makes these hyperplanes special is that they are positioned to be as far away as possible from the closest data points.
+The closest data points therefore determine where the hyperplane lays, and are called the support vectors. \parencite{homl:5}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/svm}
+	\caption{A Support Vector Machine \parencite{svm_pic}}
+	\label{fig:svm}
+\end{figure}
+
+This is all better understood with some visualisation. 
+Please take a look at \autoref{fig:svm}.
+It is easy to see in this picture that the hyperplane is positioned to maximize the margin between the support vectors.
+It is also important to realize that the data points that are not support vectors do not affect the hyperplane in any way. \parencite{homl:5}
+
+Support vector machines can also be used for regression.
+This is also done by constructing a hyperplane.
+However, the objective is reversed.
+This hyperplane is positioned to include as many data points in the margin as possible.
+The size of the margin is determined by hyperparameter $\epsilon$. \parencite{homl:5}
+
+For the mathematical background and more information on support vector machines, please refer to \parencite{homl:5}.
+
+\subsubsection{Decision Trees}
+Decision trees are a form of graph based models.\parencite{ml:prml}
+More specifically, decision trees are trees that contain basic conditional statements on their non-leaf nodes.
+For any given feature vector, a decision tree runs tests these conditions to reach a decision.
+These tests start at the root of the tree.
+Depending on the outcome of the test, a child node is selected.
+This process continues iteratively until a leaf node is reached, where a decision is stored.
+Decision in this context is the label for the feature vector.\parencite{ai:ml}
+
+
+For the mathematical background and more information on decision trees, please refer to \parencite{homl:6}.
+
+\subsubsection{Ensemble Learning}
+Instead of training a singular model, we can train many weak models and aggregate the results.
+Such aggregations of models are called ensembles, and the learning process is called ensemble learning.
+One simple yet particularly powerful example is the random forest:
+A random forest is an ensemble of decision trees, each trained on different random subsets of the training set.
+A random forest makes predictions by aggregating the predictions of each individual tree.
+For regression, the predictions are averaged.
+For classification, the most predicted class is the final prediction.\parencite{homl:7}
+ 
+More information on ensemble learning can be found at \parencite{homl:7}
+
+\subsection{More Machine Learning}
+Finally, let's go through some more advanced machine learning concepts that will be relevant in the next chapter.
+\subsubsection{Data Preprocessing}
+
+\subsubsection{Feature Extraction}
+
+\subsubsection{Cross Validation}
+Cross validation is a technique used in model selection.
+The data is first divided into $N$ parts.
+Afterwards the model is trained on $N-1$ parts and validated on the remaining part.
+This process is repeated $N$ times, each with a different part as the validation set.
+Finally, the best performing model is selected.\parencite{ml:prml}
+\subsubsection{Hyperparameter Optimization}
+Hyperparameter optimization refers to fine tuning the model hyperparameter to improve performance.
+This is usually done automatically using grid-search.\parencite{homl:2} 

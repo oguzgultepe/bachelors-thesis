@@ -114,6 +114,27 @@
       \verb 10.3348/kjr.2009.10.5.464
       \endverb
     \endentry
+    \entry{faoun}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=6b10054380631757aeb70ee35928026b}{%
+           family={{Food and Agriculture Organization of the United Nations}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{6b10054380631757aeb70ee35928026b}
+      \strng{fullhash}{6b10054380631757aeb70ee35928026b}
+      \strng{bibnamehash}{6b10054380631757aeb70ee35928026b}
+      \strng{authorbibnamehash}{6b10054380631757aeb70ee35928026b}
+      \strng{authornamehash}{6b10054380631757aeb70ee35928026b}
+      \strng{authorfullhash}{6b10054380631757aeb70ee35928026b}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Dietary Assessment: A resource guide to method selection and application in low resource settings}
+      \field{year}{2018}
+    \endentry
     \entry{homl:6}{inbook}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
@@ -444,33 +465,6 @@
       \field{edition}{3}
       \field{pubstate}{inpreparation}
       \field{title}{Speech and Language Processing}
-    \endentry
-    \entry{latex}{book}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=5d77435450d10a850a5b58577b9a456b}{%
-           family={Lamport},
-           familyi={L\bibinitperiod},
-           given={Leslie},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Addison-Wesley Professional}%
-      }
-      \strng{namehash}{5d77435450d10a850a5b58577b9a456b}
-      \strng{fullhash}{5d77435450d10a850a5b58577b9a456b}
-      \strng{bibnamehash}{5d77435450d10a850a5b58577b9a456b}
-      \strng{authorbibnamehash}{5d77435450d10a850a5b58577b9a456b}
-      \strng{authornamehash}{5d77435450d10a850a5b58577b9a456b}
-      \strng{authorfullhash}{5d77435450d10a850a5b58577b9a456b}
-      \field{sortinit}{L}
-      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{LaTeX : A Documentation Preparation System User's Guide and Reference Manual}
-      \field{year}{1994}
     \endentry
     \entry{ai:ml}{inbook}{}
       \name{author}{2}{}{%

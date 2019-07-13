@@ -2006,7 +2006,8 @@
     <bcf:citekey order="29">homl:2</bcf:citekey>
     <bcf:citekey order="30">ml:prml</bcf:citekey>
     <bcf:citekey order="31">homl:2</bcf:citekey>
-    <bcf:citekey order="32">latex</bcf:citekey>
+    <bcf:citekey order="32">faoun</bcf:citekey>
+    <bcf:citekey order="33">faoun</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

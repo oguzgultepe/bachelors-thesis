@@ -2006,11 +2006,12 @@
     <bcf:citekey order="29">homl:2</bcf:citekey>
     <bcf:citekey order="30">ml:prml</bcf:citekey>
     <bcf:citekey order="31">homl:2</bcf:citekey>
-    <bcf:citekey order="32">faoun</bcf:citekey>
+    <bcf:citekey order="32">r2score</bcf:citekey>
     <bcf:citekey order="33">faoun</bcf:citekey>
-    <bcf:citekey order="34">pandas</bcf:citekey>
-    <bcf:citekey order="35">numpy</bcf:citekey>
-    <bcf:citekey order="36">scikit-learn</bcf:citekey>
+    <bcf:citekey order="34">faoun</bcf:citekey>
+    <bcf:citekey order="35">pandas</bcf:citekey>
+    <bcf:citekey order="36">numpy</bcf:citekey>
+    <bcf:citekey order="37">scikit-learn</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -721,6 +721,20 @@
       \field{title}{Natural Language Processing}
       \field{year}{2010}
     \endentry
+    \entry{r2score}{misc}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{scikit-learn.org}
+      \field{title}{Scikit-Learn User Guide, 3.3. Model evaluation: Quantifying the quality of predictions}
+      \verb{urlraw}
+      \verb https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score
+      \endverb
+      \verb{url}
+      \verb https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -69,9 +69,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Hyperparameter Optimization}{15}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Nutrition}{15}{section.2.3}
+\contentsline {subsubsection}{\nonumberline $R^2$ Score}{15}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Dietary Assesment}{15}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.3}Nutrition}{16}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}Dietary Assesment}{16}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}Dietary Goals}{16}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
@@ -81,65 +83,65 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.1}Design}{17}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Chatbot Architecture}{17}{section*.33}
+\contentsline {subsubsection}{\nonumberline Chatbot Architecture}{17}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Information Extraction}{22}{section*.44}
+\contentsline {subsubsection}{\nonumberline Information Extraction}{22}{section*.45}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.2}Implementation}{24}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline python-telegram-bot Library}{24}{section*.49}
+\contentsline {subsubsection}{\nonumberline python-telegram-bot Library}{24}{section*.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Telegram Bot API}{24}{section*.50}
+\contentsline {subsubsection}{\nonumberline Telegram Bot API}{24}{section*.51}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline /start}{25}{section*.51}
+\contentsline {paragraph}{\nonumberline /start}{25}{section*.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline /change\_timezone}{25}{section*.52}
+\contentsline {paragraph}{\nonumberline /change\_timezone}{25}{section*.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline /change\_goal}{25}{section*.53}
+\contentsline {paragraph}{\nonumberline /change\_goal}{25}{section*.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline /remove\_entry}{25}{section*.54}
+\contentsline {paragraph}{\nonumberline /remove\_entry}{25}{section*.55}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Selecting goals}{25}{section*.56}
+\contentsline {paragraph}{\nonumberline Selecting goals}{25}{section*.57}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Picking up a date for entry removal}{25}{section*.57}
+\contentsline {paragraph}{\nonumberline Picking up a date for entry removal}{25}{section*.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Picking up a time for entry removal}{27}{section*.58}
+\contentsline {paragraph}{\nonumberline Picking up a time for entry removal}{27}{section*.59}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Getting Feedback on Notification Timing}{27}{section*.59}
+\contentsline {paragraph}{\nonumberline Getting Feedback on Notification Timing}{27}{section*.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Control Structure}{27}{section*.60}
+\contentsline {subsubsection}{\nonumberline Control Structure}{27}{section*.61}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline CallbackQueryHandler}{27}{section*.61}
+\contentsline {paragraph}{\nonumberline CallbackQueryHandler}{27}{section*.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline CommandHandler}{27}{section*.62}
+\contentsline {paragraph}{\nonumberline CommandHandler}{27}{section*.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline MessageHandler}{27}{section*.63}
+\contentsline {paragraph}{\nonumberline MessageHandler}{27}{section*.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline ConversationHandler}{27}{section*.64}
+\contentsline {paragraph}{\nonumberline ConversationHandler}{27}{section*.65}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Registration}{28}{section*.65}
+\contentsline {paragraph}{\nonumberline Registration}{28}{section*.66}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Changing Timezone}{28}{section*.66}
+\contentsline {paragraph}{\nonumberline Changing Timezone}{28}{section*.67}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Changing the Goal}{28}{section*.67}
+\contentsline {paragraph}{\nonumberline Changing the Goal}{28}{section*.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Removing an Entry}{28}{section*.68}
+\contentsline {paragraph}{\nonumberline Removing an Entry}{28}{section*.69}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Meal Logging}{28}{section*.69}
+\contentsline {paragraph}{\nonumberline Meal Logging}{28}{section*.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Other Libraries}{29}{section*.70}
+\contentsline {subsubsection}{\nonumberline Other Libraries}{29}{section*.71}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Machine Learning}{29}{section.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Preprocesseing}{29}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Cleaning the Data}{29}{section*.71}
+\contentsline {subsubsection}{\nonumberline Cleaning the Data}{29}{section*.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Feature Extraction}{30}{section*.73}
+\contentsline {subsubsection}{\nonumberline Feature Extraction}{30}{section*.74}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Training and Test Set Seperation}{33}{section*.77}
+\contentsline {subsubsection}{\nonumberline Training and Test Set Seperation}{33}{section*.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Feature and Target Scaling}{33}{section*.78}
+\contentsline {subsubsection}{\nonumberline Feature and Target Scaling}{33}{section*.79}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.2}Models}{33}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
@@ -155,22 +157,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Data}{36}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Models}{36}{section.4.2}
+\contentsline {section}{\numberline {4.2}Models}{38}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{37}{chapter.5}
+\contentsline {chapter}{\numberline {5}Discussion}{39}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Dialog Agent}{37}{section.5.1}
+\contentsline {section}{\numberline {5.1}Data}{39}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Machine Learning}{37}{section.5.2}
+\contentsline {section}{\numberline {5.2}Dialog Agent}{39}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{38}{chapter.6}
+\contentsline {section}{\numberline {5.3}Machine Learning}{39}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Summary}{38}{section.6.1}
+\contentsline {chapter}{\numberline {6}Conclusion}{41}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Future Work}{38}{section.6.2}
+\contentsline {section}{\numberline {6.1}Future Work}{41}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Figures}{39}{chapter*.80}
+\contentsline {subsection}{\numberline {6.1.1}Solving the Initial Lack of Data}{41}{subsection.6.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Tables}{40}{chapter*.81}
+\contentsline {subsection}{\numberline {6.1.2}Reminders}{41}{subsection.6.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{41}{chapter*.82}
+\contentsline {subsection}{\numberline {6.1.3}Better Notification Timing}{42}{subsection.6.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.4}Detailed Meal Logging}{42}{subsection.6.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Figures}{43}{chapter*.84}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Tables}{44}{chapter*.85}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{45}{chapter*.86}

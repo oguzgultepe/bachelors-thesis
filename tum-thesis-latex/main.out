@@ -31,11 +31,15 @@
 \BOOKMARK [1][-]{section.4.1}{Data}{chapter.4}% 31
 \BOOKMARK [1][-]{section.4.2}{Models}{chapter.4}% 32
 \BOOKMARK [0][-]{chapter.5}{Discussion}{}% 33
-\BOOKMARK [1][-]{section.5.1}{Dialog Agent}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.2}{Machine Learning}{chapter.5}% 35
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 36
-\BOOKMARK [1][-]{section.6.1}{Summary}{chapter.6}% 37
-\BOOKMARK [1][-]{section.6.2}{Future Work}{chapter.6}% 38
-\BOOKMARK [0][-]{chapter*.80}{List of Figures}{}% 39
-\BOOKMARK [0][-]{chapter*.81}{List of Tables}{}% 40
-\BOOKMARK [0][-]{chapter*.82}{Bibliography}{}% 41
+\BOOKMARK [1][-]{section.5.1}{Data}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.2}{Dialog Agent}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.3}{Machine Learning}{chapter.5}% 36
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 37
+\BOOKMARK [1][-]{section.6.1}{Future Work}{chapter.6}% 38
+\BOOKMARK [2][-]{subsection.6.1.1}{Solving the Initial Lack of Data}{section.6.1}% 39
+\BOOKMARK [2][-]{subsection.6.1.2}{Reminders}{section.6.1}% 40
+\BOOKMARK [2][-]{subsection.6.1.3}{Better Notification Timing}{section.6.1}% 41
+\BOOKMARK [2][-]{subsection.6.1.4}{Detailed Meal Logging}{section.6.1}% 42
+\BOOKMARK [0][-]{chapter*.84}{List of Figures}{}% 43
+\BOOKMARK [0][-]{chapter*.85}{List of Tables}{}% 44
+\BOOKMARK [0][-]{chapter*.86}{Bibliography}{}% 45

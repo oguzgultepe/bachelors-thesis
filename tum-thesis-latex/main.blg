@@ -1,31 +1,34 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[42] biber-darwin:313> INFO - === Sat Jul 13, 2019, 19:37:30
-[69] Biber.pm:371> INFO - Reading 'main.bcf'
-[169] Biber.pm:857> INFO - Found 16 citekeys in bib section 0
-[184] Biber.pm:3976> INFO - Processing section 0
-[196] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[197] bibtex.pm:1500> INFO - LaTeX decoding ...
-[221] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
-[290] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 11, warning: 1 characters of junk seen at toplevel
-[290] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 18, warning: 1 characters of junk seen at toplevel
-[290] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 27, warning: 1 characters of junk seen at toplevel
-[290] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 36, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 45, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 56, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 63, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 73, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 80, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 89, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 98, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 107, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 116, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 127, warning: 1 characters of junk seen at toplevel
-[291] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/zjiUSqLkIg/bibliography.bib_4305.utf8, line 136, warning: 1 characters of junk seen at toplevel
-[322] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[322] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[322] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[322] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[343] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[353] bbl.pm:720> INFO - Output to main.bbl
-[354] Biber.pm:110> INFO - WARNINGS: 15
+[41] biber-darwin:313> INFO - === Sun Jul 14, 2019, 17:38:30
+[65] Biber.pm:371> INFO - Reading 'main.bcf'
+[171] Biber.pm:857> INFO - Found 19 citekeys in bib section 0
+[186] Biber.pm:3976> INFO - Processing section 0
+[197] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[199] bibtex.pm:1500> INFO - LaTeX decoding ...
+[227] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
+[299] Utils.pm:193> WARN - year field '2010--' in entry 'pandas' is not an integer - this will probably not sort properly.
+[303] Utils.pm:193> WARN - year field '2006--' in entry 'numpy' is not an integer - this will probably not sort properly.
+[332] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 11, warning: 1 characters of junk seen at toplevel
+[332] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 18, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 27, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 36, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 45, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 56, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 63, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 73, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 80, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 89, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 98, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 107, warning: 1 characters of junk seen at toplevel
+[333] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 116, warning: 1 characters of junk seen at toplevel
+[334] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 127, warning: 1 characters of junk seen at toplevel
+[334] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 136, warning: 1 characters of junk seen at toplevel
+[334] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/fs/76ksszvd0dv07r91kxf_wx_m0000gn/T/iXWeDM764k/bibliography.bib_6286.utf8, line 154, warning: 1 characters of junk seen at toplevel
+[375] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[376] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[376] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[376] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[406] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[425] bbl.pm:720> INFO - Output to main.bbl
+[425] Biber.pm:110> INFO - WARNINGS: 18

@@ -39,7 +39,7 @@ We don't assign questions to User Id and Meal Date slots, as they are meant to b
 \begin{table}[htbp]
   \caption[Question for Logging Dietary Intake]{Questions for Logging Dietary Intake}\label{tab:logging_questions}
   \centering
-  \begin{tabular}{l|l|l}
+  \begin{tabular}{l|l}
     Slot&Questions\\ \toprule
     User Id&-\\ \hline
     Meal Time&When was this meal/snack?\\ \hline
@@ -550,8 +550,243 @@ For deriving timezones from locations, we use the 'timezonefinder' library.
 Finally, for converting timezone information stored as text into timezone objects, we us the 'pytz' library.
 
 \section{Machine Learning}
+In this section, we will go through the machine learning component of our system.
+Much like any machine learning pipelin, we will start with data preprocessig.
+Afterwards, we will take a look at the models used.
+Finally, we will end this section on model seleciton and prediction.
+
+We use pandas \parencite{pandas} and numpy \parencite{numpy} libraries for data manupilation.
+For creating, training and testing our models, we use the scikit-learn \parencite{scikit-learn} library.
 \subsection{Preprocesseing}
-Feature Extraction
+We will be going through some of the standard steps of preprocessing.
+\subsubsection{Cleaning the Data}
+Data neads to be cleaned before being fed into the model.
+We have to make sure that there are no rows with missing values,
+and that each column has the same data type for every row.
+
+After inspecting our data, we see that there are indeed no missing values.
+However, we realize that the meal time values aren't saved uniformly.
+The current system stores meal time in 'hours:minutes: format.
+However, there are some entries from the early stages of the system, 
+where the meal time is stored as\\
+'hours:minutes:seconds.microseconds+timezone'.\\
+We solve this problem by applying the function shown in \autoref{fig:code_clean} to meal time values.
+
+\begin{figure}[htpb]
+  \centering
+  \begin{tabular}{c}
+  \begin{lstlisting}[language=python]
+lambda x:x[:5]
+  \end{lstlisting}
+  \end{tabular}
+  \caption[Cropping Function for Time Values]{Cropping Function for Time Values}
+  \label{fig:code_clean}
+\end{figure}
+
+This function simply returns the substring containing the first 5 characters of the input string.
+Values that are 5 characters long ('hours:minutes' values) aren't affected.
+For any other value, the return value corresponds to the 'hours:minutes' part, rendering the data uniform.
+
+After making sure that our data is uniform, we sort our values based on meal date and meal time for further processing.
+\subsubsection{Feature Extraction}
+We need to craft more expressive features from our input values.
+We also need to craft a target value (label) that is dependent on our features.
+After some brainstorming we decide on the features shown in \autoref{tab:features} and the target value shown in \autoref{tab:target}.
+
+\begin{table}[htbp]
+  \caption[Features]{Features}
+  \label{tab:features}
+  \centering
+  \begin{tabular}{l|l}
+    Feature&Explanation\\ \toprule
+    Day of the Week&Day of the week as a one-hot encoded feature value\\ \hline
+    Meals so far&Number of meals the user had on the particular date\\ \hline
+    Snacks so far&Number of snack s the user had on the particular date\\ \hline
+    Last Entry Type&Type of the last entry, 0 for snack and 1 for meal\\ \hline
+    Last Entry Time&Time of the last entry, represented in minutes\\ \hline
+  \end{tabular}
+
+  \caption[Target]{Target}
+  \label{tab:target}
+  \centering
+  \begin{tabular}{l|l|l}
+    Target&Explanation\\ \toprule
+    Time Until Next Entry&Time until next entry, represented in minutes\\ \hline
+  \end{tabular}
+\end{table}
+
+We convert our base input values to feature vectors using the code shown in \autoref{fig:feature_template}.
+
+\begin{figure}[htpb]
+  \centering
+  \begin{tabular}{c}
+  \begin{lstlisting}[language=python, breaklines, breakatwhitespace]
+def feature_template(data):
+    new_data = np.zeros((data.shape[0]-1,12))
+    current_datetime = ''
+    meal_count = 0
+    snack_count = 0
+    counter = 0
+    meal = 0
+    first = True
+    for row in data:
+        if first:
+            current_datetime = datetime.strptime(row[1]+' '+row[2], 
+                                                    '%Y-%m-%d %H:%M')
+            meal = row[3]
+            first = False
+            continue
+
+        new_datetime = datetime.strptime(row[1]+' '+row[2], 
+                                            '%Y-%m-%d %H:%M')
+        new_data[counter][int(current_datetime.strftime('%w'))] = 1
+        new_data[counter][7] = meal_count
+        new_data[counter][8] = snack_count
+        new_data[counter][9] = meal
+        new_data[counter][10] = int(current_datetime.strftime('%H')) * 60
+        new_data[counter][10] += int(current_datetime.strftime('%M'))
+        diff = new_datetime - current_datetime
+        new_data[counter][11] = diff.days*1440 + diff.seconds/60
+        if current_datetime.date() == new_datetime.date():
+            if meal:
+                meal_count += 1
+            else:
+                snack_count += 1
+        else:
+            meal_count = 0
+            snack_count = 0
+
+        current_datetime = new_datetime
+        meal = row[3]
+        counter += 1
+  \end{lstlisting}
+  \end{tabular}
+  \caption[Function for Feature Extraction]{Function for Feature Extraction}
+  \label{fig:feature_template}
+\end{figure}
+
+\begin{figure}
+  \ContinuedFloat
+  \begin{tabular}{c}
+  \begin{lstlisting}[language=python, breaklines, breakatwhitespace]
+
+    last_entry = np.zeros((11,1))
+    last_entry[int(current_datetime.strftime('%w'))] = 1
+    last_entry[7] = meal_count
+    last_entry[8] = snack_count
+    last_entry[9] = meal
+    last_entry[10] = int(current_datetime.strftime('%H')) * 60
+    last_entry[10] += int(current_datetime.strftime('%M'))
+
+    previous_entries = pd.DataFrame(new_data, columns=
+                                      ['Sunday','Monday',
+                                      'Tuesday','Wednesday',
+                                      'Thursday','Friday',
+                                      'Saturday','Meals So Far',
+                                      'Snacks So Far','Meal or Snack',
+                                      'Time of Entry','Next Entry'])
+
+    return previous_entries, last_entry
+
+  \end{lstlisting}
+  \end{tabular}
+  \caption[]{Function for Feature Extraction (continued)}
+\end{figure}
+\newpage
+This function takes a numpy array containing the user data and returns two objects.
+The first object is pandas data frame, containing the feauture vectors and target values for every entry except the last one.
+We use this data frame to train and test our models.
+The second object is a numpy array, contatining the feature vector for the the last entry.
+This array is meant to be used after model selection, in order to predict the time of the next entry for the user.
+
+\subsubsection{Training and Test Set Seperation}
+We need to seperate our data into training and test sets before the next step.
+We do this with the help of \texttt{train\_test\_split()} function from scikit-learn library.
+This function accepts an array of feature vectors (X), an array of target values (y), and a float value specfiying the size of the test set.
+It returns four arrays; X\_train, X\_test, y\_train and y\_test.
+We set our test size as $0.1$, meaining 10\% of the data is used for testing.
+
+\subsubsection{Feature and Target Scaling}
+After feature extraction, we end up with a feature vector.
+This feature vector mostly consists of small values; usually zeros or ones, and single digit numbers for two features.
+However, one feature, namely the time of entry, has a range between 0 and 1440.
+Most machine learning models perform better when the features are similaryly scaled.
+Because of this, we need to rescale our features.
+
+We use \texttt{MinMaxScaler()} object from scikit-learn library for this task.
+This object transforms features by scaling each feature to a given range, where the default range is betwen 0 and 1.
+It works like this: First, we fit the scaler to the data using the \texttt{fit()} function.
+Then we call \texttt{transform()} function on the data to scale our features.
+
+So why did we need to seperate our data before this step?
+Because fitting the scaler to the data means that the scaler learns the data.
+Good data science practice dictates that the test set must contain unseen data.
+As a result we fit the scaler to our training data, and then use it to transform both the training and the test data.
+We also have significantly larger target values (mostly between 0 and 1440).
+This might cause instability during the training phase.
+Because of this, we repeat the scaling process on the target values using another scaler.
+
 \subsection{Models}
-\subsection{Training and Testing}
+Now that our data is preprocessed, we can feed it into our models.
+We have very little data to work with.
+This means that we need to use simple, lightweight models to prevent overfitting.
+
+We use a total of 4 base models, all of which we create using scikit-learn library.
+Additionally we use 4 ensemble learners based on these 4 models.
+All of the models and their corresponding scikit-learn objects can be seen in \autoref{tab:models}
+\texttt{SVR() kernel} parameter is selected to keep the model linear.
+Other model parameters shown are selected based on trial and errork
+
+\begin{table}[htbp]
+  \caption[Models]{Models}\label{tab:models}
+  \centering
+  \begin{tabular}{l|p{6cm}}
+    Model&Scikit-learn Object\\ \toprule
+    Linear Regression&\texttt{LinearRegression()}\\ \hline
+    Ridge Regression&\texttt{Ridge()}\\ \hline
+    Support Vector Machine Regression&\texttt{SVR(kernel='linear')}\\ \hline
+    Decision Tree Regression&\texttt{DecisionTreeRegressor()}\\ \hline
+    Ensemble of Linear Regressors&\texttt{BaggingRegressor( base\_estimator= LinearRegression(), max\_samples=1.0, max\_features=0.7)}\\ \hline
+    Ensemble of Ridge Regressors &\texttt{BaggingRegressor( base\_estimator=Ridge(), max\_samples=1.0, max\_features=0.7)}\\ \hline
+    Ensemble of SVM Regressors &\texttt{BaggingRegressor( base\_estimator= SVR(kernel='linear'), max\_samples=1.0, max\_features=0.7)}\\ \hline
+    Random Forest Regressor&\texttt{RandomForestRegressor( max\_features=0.7)}\\ \hline
+  \end{tabular}
+\end{table}
+
+We also perform 10 fold cross validation on every base model, and hyper parameter optimization on two base models using \texttt{GridSearchCV()} from scikit-learn library.
+We optimize the \texttt{'alpha'} parameter for the ridge regression between $0.5$ and $1.0$, 
+and the \texttt{'C'} parameter for SVM regresssion between $0.1$, $0.5$ and $1.0$.
+
+\subsection{Model Selection and Prediction}
+After preparing our data and model, we come to the model selection phase.
+The first thing we do is checking if there is an already stored model in the database.
+If there is, we set this model as the best model and the model score as the best score.
+If there is no stored model, we set the best model to \texttt{None} and the best score to $0$.
+
+Next, we create, train and test the previously mentioned eight models for a number of iterations.
+This number is set to $100$ if the best score is $0$, signiying that this is the first time that we train models for the user.
+Otherwise, the number is set to 10.
+During an iteration, if we find a model performing better than the best model, we set this model as the best model and its score as the best score.
+After all the iterations are complete, we check the best model.
+If it is still set to \texttt{None}, this means that all the models scored less than $0$, most likely due to insufficent data.
+In this case we make no prediction.
+Otherwise, we use the best performing model to predict the time until next entry.
+After the prediction, we save the best performing model into our database.
+
+\subsection{Feedback Value}
+Eating is not an instantenous activity.
+When users report meal times, they can report any point in time that is within the duration of the eating activity.
+We use a feedback value to account for this.
+When we send a user a notification, we ask for a feedback on the timing.
+We save the user's feedback as an int value and use it the next time we need to make a prediction.
+This feedback value denotes delay, and can be positive or negative.
+When we make a prediction, we simply add this feedback value to the result.
+We calculate the time of the next entry based on this final value.
+
+\subsection{Chatbot Integration}
+When a user logs a new entry, we call a function that contains the entire machine learning pipeline.
+This process doesn't take long due to small amount of data available and the simplicity of the models.
+We schedule a message at the precited time, and the system goes back to the idle state.
 \section{Testing the System}
+We give access links to volunteers consisting of university students in order to test the system.
+The volunteers are asked to use the system for 15 days, and then give feedback on the experience.

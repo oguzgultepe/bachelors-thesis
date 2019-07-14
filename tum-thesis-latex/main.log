@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.11)  14 JUL 2019 01:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.11)  14 JUL 2019 17:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1313,14 +1313,14 @@ LaTeX Info: Redefining \nameref on input line 22.
 Package nag Info: Command \hc@caption not defined, skipping amendment on input line 22.
 Package nag Info: Command \topcaption not defined, skipping amendment on input line 22.
  (./pages/cover.tex
-<logos/tum.pdf, id=159, 54.02504pt x 28.452pt>
+<logos/tum.pdf, id=171, 54.02504pt x 28.452pt>
 File: logos/tum.pdf Graphic file (type pdf)
 <use logos/tum.pdf>
 Package pdftex.def Info: logos/tum.pdf  used on input line 16.
 (pdftex.def)             Requested size: 108.06296pt x 56.9055pt.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 28.
-<logos/faculty.pdf, id=160, 597.50786pt x 845.01837pt>
+<logos/faculty.pdf, id=172, 597.50786pt x 845.01837pt>
 File: logos/faculty.pdf Graphic file (type pdf)
 <use logos/faculty.pdf>
 Package pdftex.def Info: logos/faculty.pdf  used on input line 36.
@@ -1443,7 +1443,7 @@ File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 ))) (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 ) [10] [11] [12]
-<figures/svm.png, id=375, 505.89pt x 364.36125pt>
+<figures/svm.png, id=390, 505.89pt x 364.36125pt>
 File: figures/svm.png Graphic file (type png)
 <use figures/svm.png>
 Package pdftex.def Info: figures/svm.png  used on input line 469.
@@ -1456,29 +1456,100 @@ chapter 3.
 ] [18] [19] [20] [21] (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) [22] [23] [24]
-<figures/commands.jpeg, id=541, 752.8125pt x 1339.0025pt>
+<figures/commands.jpeg, id=557, 752.8125pt x 1339.0025pt>
 File: figures/commands.jpeg Graphic file (type jpg)
 <use figures/commands.jpeg>
 Package pdftex.def Info: figures/commands.jpeg  used on input line 431.
 (pdftex.def)             Requested size: 150.55983pt x 267.79576pt.
-<figures/keyboard.jpeg, id=542, 752.8125pt x 1339.0025pt>
+<figures/keyboard.jpeg, id=558, 752.8125pt x 1339.0025pt>
 File: figures/keyboard.jpeg Graphic file (type jpg)
 <use figures/keyboard.jpeg>
 Package pdftex.def Info: figures/keyboard.jpeg  used on input line 438.
 (pdftex.def)             Requested size: 150.55983pt x 267.79576pt.
- [25] [26 <./figures/commands.jpeg> <./figures/keyboard.jpeg>] [27] [28]) (./chapters/04_results.tex [29]
+ [25] [26 <./figures/commands.jpeg> <./figures/keyboard.jpeg>] [27] [28] [29]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 579.
+
+Overfull \hbox (2.27855pt too wide) in paragraph at lines 622--664
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 16.20552pt on input line 666.
+
+[30] [31] [32] [33]
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+[]|\T1/cmtt/m/n/10.95 BaggingRegressor(
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+\T1/cmtt/m/n/10.95 base_estimator=
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+\T1/cmtt/m/n/10.95 LinearRegression(),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--749
+\T1/cmtt/m/n/10.95 max_samples=1.0,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
+[]|\T1/cmtt/m/n/10.95 BaggingRegressor(
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
+\T1/cmtt/m/n/10.95 base_estimator=Ridge(),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
+\T1/cmtt/m/n/10.95 max_samples=1.0,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--751
+[]|\T1/cmtt/m/n/10.95 BaggingRegressor(
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--751
+\T1/cmtt/m/n/10.95 base_estimator=
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--751
+\T1/cmtt/m/n/10.95 SVR(kernel='linear'),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--751
+\T1/cmtt/m/n/10.95 max_samples=1.0,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
+[]|\T1/cmtt/m/n/10.95 RandomForestRegressor(
+ []
+
+[34]) (./chapters/04_results.tex [35]
 chapter 4.
-) (./chapters/05_discussion.tex [30
+) (./chapters/05_discussion.tex [36
 
 
 ]
 chapter 5.
-) (./chapters/06_conclusion.tex [31
+) (./chapters/06_conclusion.tex [37
 
 
 ]
 chapter 6.
-) [32
+) [38
 
 
 ]
@@ -1487,7 +1558,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 52.
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [33
+ [39
 
 
 ]
@@ -1496,7 +1567,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 53.
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [34
+ [40
 
 
 ]
@@ -1504,36 +1575,36 @@ chapter without number
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[35
+[41
 
 
 ]
 No complaints by nag.
-[36]
+[42]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 57.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A1657C1CB52266A97D5EF0DFA024323F;2306.
+(rerunfilecheck)             Checksum: AC659FC355CBC6069828805EC4A4E3F2;2505.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50366 strings out of 492649
- 1120555 string characters out of 6129622
- 1788160 words of memory out of 5000000
- 53046 multiletter control sequences out of 15000+600000
- 583557 words of font info for 261 fonts, out of 8000000 for 9000
+ 50513 strings out of 492649
+ 1122687 string characters out of 6129622
+ 1815582 words of memory out of 5000000
+ 53100 multiletter control sequences out of 15000+600000
+ 584163 words of font info for 271 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  81i,17n,136p,10457b,3150s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (43 pages, 1538788 bytes).
+Output written on main.pdf (49 pages, 1558344 bytes).
 PDF statistics:
- 724 PDF objects out of 1000 (max. 8388607)
- 640 compressed objects within 7 object streams
- 206 named destinations out of 1000 (max. 500000)
- 33622 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 868 PDF objects out of 1000 (max. 8388607)
+ 777 compressed objects within 8 object streams
+ 287 named destinations out of 1000 (max. 500000)
+ 33646 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -3,7 +3,7 @@
 \chapter{Discussion}\label{chapter:discussion}
 
 \section{Data}
-It is clear to see that dietary patterns vary drastically not just between users, but also between days of a user.
+It is clear to see that the dietary patterns vary drastically not just between users, but also between the days of a user.
 This high variance might be due to the user demographic which consists of university students.
 Whatever the reason, this lack of easily discernible patterns naturally makes pattern recognition harder.
 
@@ -12,10 +12,10 @@ There are only 3 users with more than 10 entries, which means that we can train 
 
 \section{Dialog Agent}
 This lack of data for the other 3 users can be attributed to a common feedback about the dialog agent:
-Users often forget to log what eat.
+Users often forgot to log what they ate.
 This common feedback points to a need for a reminder system, which could be implemented as future work.
 
-Multiple users stated that they usually logged all their meals at the end of the day collectively.
+Multiple users stated that they usually logged all their meals at once at the end of the day.
 This behavior obviously leaves most of the predictive functionality obsolete, as the prediction occurs at the time of logging.
 One possible solution to this problem is to schedule all the messages for the day at the start of the day, and then optimize the timing as the user makes entries.
 This functionality could also work as a reminder, solving two problems at once.
@@ -28,7 +28,7 @@ Overall, users stated that the system would somewhat accurately predict when the
 
 Machine learning models achieved surprisingly high $R^2$ scores; over 0.85 for two users and 0.67 for another.
 Ensemble learning methods outperformed basic models as expected;
-Best performing models were Random Forests for two users, and Bag of Linear Regressors for the other one.
+Best performing models were Random Forests for two users, and a Bag of Linear Regressors for the other one.
 The fact that the best performing models vary between users is an indicator that there isn't a single best model for our task. 
 
 There is another interesting point to mention here:

@@ -10,21 +10,21 @@ In this section we will be taking a look at some NLP concepts that are relevant 
 Most of the knowledge provided here is based on \parencite{nlp}.
 We will start with regular expressions, powerful tools able to catch text patterns. 
 Then we will be looking at information extraction from natural language. 
-Finally, we will finish this chapter on dialog systems and chatbot.
+Finally, we will finish this chapter on dialog systems and chatbots.
 
 \subsection{Regular Expressions}
 \paragraph{A regular expression}is formally defined as an algebraic notation that represents a specific set of strings.
 However, this representation is not explicit. 
 Regular expressions denote textual patterns which are able to produce implicit sets.
 These patterns are useful for searching in text.
-A regular expression search function finds every instance of text in the corpus that belongs to the pattern's implicit set.
+A regular expression search function goes through a corpus and finds every instance of text that belongs to the pattern's implicit set.
 These instances are said to be 'matched' by the pattern.
 
 Regular expressions are supported in every computer language, word processor and text processing tool. 
-However, there may be differences in how they treat certain expressions. 
+However, there may be differences in how different programs treat certain expressions. 
 As the knowledge provided here is based on \parencite{nlp_re}, we will be treating expressions as they are shown there.
-Another thing to keep in mind is that this is not a comprehensive guide for regular expression. 
-We will be looking at basics and some more complex operators we need for our specific problem. 
+Another thing to keep in mind is that this is not a comprehensive guide for regular expressions. 
+We will be looking at basics and some of the more complex operators we need for our specific problem. 
 
 \subsubsection{Basic Regular Expression Patterns}
 Simplest regular expressions are sequences of characters. 
@@ -162,12 +162,12 @@ So how can we set 'ha' as the preceding element?
 
 This is where grouping comes into play.
 In regular expressions, grouping is done by wrapping a phrase in parentheses. 
-From then on, the phrase inside the parentheses is treated as a singular entity by operators outside the parentheses.
-\texttt{(ha)+} matches any 'ha', 'haha' and any number of repetitions of the phrase 'ha'.
+From then on, the phrase inside the parentheses is treated as a singular entity by the operators outside the parentheses.
+\texttt{(ha)+} matches 'ha', 'haha' and any number of repetitions of the phrase 'ha'.
 
 Grouping also comes in handy when using the disjunction operator.
 For example, let's assume we need a regular expression that matches 'hour', 'minute', 'hours' and 'minutes'.
-We ca not use \texttt{hour|minutes?}, because the disjunction is between \texttt{hour} and \texttt{minutes?}
+We can not use \texttt{hour|minutes?}, because the disjunction is between \texttt{hour} and \texttt{minutes?}.
 This is because the \texttt{?} is evaluated first, then the sequences and only then the disjunction. 
 Instead, we can use \texttt{(hours|minute)s?}. 
 This expression works since the parentheses are evaluated before all the other operators.
@@ -225,7 +225,7 @@ Knowledge provided in this subsection is based on \parencite{nlp_ie}.
 \subsubsection{Extracting and Normalizing Temporal Expressions}
 Temporal expressions are parts of text that refer to durations or points in time.  
 Here, we will be focusing less on durations and more on points in time.
-Temporal expressions such as "17th of July" and "19.30" that directly refer to point in time are called absolute temporal expression. 
+Temporal expressions such as "17th of July" and "19.30" that directly refer to a point in time are called absolute temporal expression. 
 Expressions such as "last week" and "2 hours ago" that refer to points in time in relation to some other point are called relative temporal expressions.
 
 
@@ -248,10 +248,10 @@ Finally, the points in time, which the temporal expressions were mapped to, must
 The standards for saving temporal expressions can be seen in \parencite{ISO8601}
 
 \subsubsection{Template Filling}
-Many times we have to deal with texts describing common and stereotypical events.
+It is often the case that we have to deal with texts describing common and stereotypical events.
 These events usually follow certain patterns or have certain participants with certain roles.
 Our knowledge of these common events may come in handy in information extraction.
-For example, when we hear the following:\\
+For example, consider the following question:\\
 "Would you like to join me for dinner at L'Osteria tomorrow at 8pm?"\\
 Even if we have never heard of L'Osteria, we can assume that it is a restaurant.
 This is because inviting somebody for a dinner is a common event which usually includes an inviter, invitee, a restaurant and a time.
@@ -276,7 +276,7 @@ and filling the associated templates with information extracted from the text.\
 
 \subsection{Dialog Systems}
 In this subsection, we will be talking about dialog systems.
-Dialog systems are programs use natural language to communicate with the user.
+Dialog systems are programs that use natural language to communicate with the user.
 In this subsection, we will first go through the difference between task-oriented dialog agents and chatbots.
 Next we will be taking a look at modern task-oriented dialog systems: frame based dialog agents.
 Finally, we will end this subsection on control structures for such dialog agents.
@@ -294,11 +294,11 @@ These tasks can include for example finding restaurants, booking hotels or sendi
 Popular digital assistants such as Alexa and Siri fall under this category.
 Chatbots, on the other hand, are dialog agents without specific goals, built to mimic human conversation.
 
-Here we will be focusing on task based dialog agents rather than chatbots.
+Here we will be focusing on task-oriented dialog agents rather than chatbots.
 
 \subsubsection{Frame Based Dialog Agents}
 What is a frame based dialog agent?
-In order to answer this question, we first need to understand some concepts.
+In order to answer this question, we first need to understand some other concepts.
 
 Domains are specific areas of knowledge or activity such as computer science or fishing.
 Domains are modeled by abstract constructs called domain ontologies.
@@ -326,7 +326,7 @@ Dialog agents that are based on such frames are called frame based dialog agents
 \subsubsection{Control Structure for Frame Based Dialog}
 A task-oriented dialog agent needs to gather appropriate data to accomplish the task at hand.
 In order to achieve this, dialog systems implement control structures that guide the conversation.
-For a frame base dialog agent, the control structure is built around the frame.
+For a frame based dialog agent, the control structure is built around the frame.
 These control structures are usually finite-state automatas that are hand-designed for the task. 
 
 Let's consider the example frame shown at \autoref{tab:frame}.
@@ -394,7 +394,7 @@ This alleviates the need to match answers with slots.
 It also allows for fine tuning the answer processing for the expected type of answer.
 However, such systems offer the user no flexibility.
 Consider the following input from the user:\\
-"I would like reserve a table at L'Osteria for tomorrow"\\
+"I would like to reserve a table at L'Osteria for tomorrow"\\
 This sentence already includes the information needed to fill two slots: Restaurant and Reservation Date.
 It is possible to augment a dialog system with the ability to recognize such inputs, allowing for multiple slots to be filled at once.
 Such a system would pose the user questions for the empty slots, and simply skip the questions for the filled ones.
@@ -404,8 +404,8 @@ These systems are called mixed-initiatives, as the user also holds some initiati
 Machine Learning is the science (and art) of programming computers so they can learn from data. \parencite{ml:homl}
 In this section, we will take a look at some machine learning concepts that are relevant to this thesis.
 We will start with basics of ML, explaining some basic terminology. 
-Afterwards we will take a brief look at the models used in the thesis.
-Finally, we will end the section on some additional relevant concepts.
+Afterwards we will take a brief look at the models used in this thesis.
+Finally, we will end this section on some additional relevant concepts.
 Machine learning is a broad subject with many subcategories.
 Here we will be focusing on supervised learning; learning from labeled data.
 
@@ -415,8 +415,8 @@ Assume we have a data set consisting of N input-output pairs such as the followi
  
 $(x_1,y_1), (x_2,y_2), \ldots, (x_n,y_n)$
 
-For any of these pairs, we call the input value $x_i$ the predictor and the $y_i$ the labels.\parencite{ml:homl}
-Supervised learning is based on the assumption that there is function dependency between the predictors and the labels.
+For any of these pairs, we call the input value $x_i$ the predictor and the $y_i$ the label.\parencite{ml:homl}
+Supervised learning is based on the assumption that there is a functional dependency between the predictors and the labels.
 This functional dependency can be modeled as $f(x_i)=y_i$, where $f$ is called the true function.
 The goal of the supervised learning is to construct a function $h$ -called hypothesis- that approximates the true function $f$.
 In general, we split supervised learning instances into two groups: classification and regression. 
@@ -452,7 +452,7 @@ For more information on linear regression models, please refer to \parencite{hom
 \subsubsection{Ridge Regression}
 Ridge regression is very similar to linear regression. 
 The only difference is that ridge regression adds a regularization term $a\sum_{i=1}^{n}{\theta_{}^{2}}$ to the cost function. 
-This penalizes large weight in order to prevent overfitting, a phenomenon where a model memorizes the data instead of generalizing over it.\parencite{homl:4}
+This penalizes large weights in order to prevent overfitting, a phenomenon where a model memorizes the data instead of generalizing over it.\parencite{homl:4}
 
 $a$ is called the regularization strength and determines how much the large weights get penalized.
 Regularization strength is a hyperparameter, a parameter that is set before the learning process and is not optimized over the data.\parencite{homl:4}
@@ -473,21 +473,21 @@ The closest data points therefore determine where the hyperplane lays, and are c
 
 This is all better understood with some visualization. 
 Please take a look at \autoref{fig:svm}.
-It is easy to see in this picture that the hyperplane is positioned to maximize the margin between the support vectors.
+It is easy to see in this picture that the hyperplane is positioned to maximize the margin between the hyperplane and the support vectors.
 It is also important to realize that the data points that are not support vectors do not affect the hyperplane in any way. \parencite{homl:5}
 
 Support vector machines can also be used for regression.
 This is also done by constructing a hyperplane.
 However, the objective is reversed.
 This hyperplane is positioned to include as many data points in the margin as possible.
-The size of the margin is determined by hyperparameter $\epsilon$. \parencite{homl:5}
+The size of the margin is determined by the hyperparameter $\epsilon$. \parencite{homl:5}
 
 For the mathematical background and more information on support vector machines, please refer to \parencite{homl:5}.
 
 \subsubsection{Decision Trees}
-Decision trees are a form of graph based models.\parencite{ml:prml}
+A decision tree is a form of a graph based model.\parencite{ml:prml}
 More specifically, decision trees are trees that contain basic conditional statements on their non-leaf nodes.
-For any given feature vector, a decision tree runs tests these conditions to reach a decision.
+For any given feature vector, a decision tree runs a series of tests to reach a decision.
 These tests start at the root of the tree.
 Depending on the outcome of the test, a child node is selected.
 This process continues iteratively until a leaf node is reached, where a decision is stored.
@@ -510,10 +510,10 @@ More information on ensemble learning can be found at \parencite{homl:7}
 \subsection{More Machine Learning}
 Finally, let's go through some more advanced machine learning concepts that will be relevant in the next chapter.
 \subsubsection{Data Preprocessing}
-It is often the case that we have to work on imperfect data.
+It is often the case that we have to work with imperfect data.
 Some values might be missing for some instances, data might not be uniform or features might not be helpful as they are.
-Collection of transformations we apply to the data before feeding it into to our models is called preprocessing.\parencite{homl:2}
-This preprocessing includes:
+Collection of transformations we apply to the data before feeding it into our models is called preprocessing.\parencite{homl:2}\\
+Preprocessing includes:
 
 Cleaning the data to make sure it is uniform.
 
@@ -534,8 +534,8 @@ Hyperparameter optimization refers to the process of fine tuning the model hyper
 This is usually done automatically using grid-search.\parencite{homl:2} 
 
 \subsubsection{$R^2$ Score}
-$R^2$ Score (pronounced R squared) or the coefficient of determination is statistical metric.
-In most simple terms, $R^2$ score shows how much of the variance in the target values can be explained by a statistical model.
+$R^2$ Score (pronounced R squared) or the coefficient of determination is a statistical metric.
+In the simplest terms, $R^2$ score shows how much of the variance in the target values can be explained by a statistical model.
 It can be used to evaluate models, where a higher score indicates a better fit on data.
 Best possible $R^2$ score is 1.0.
 $R^2$ score can be negative too, indicating that the model is arbitrarily worse.\parencite{r2score}
@@ -553,7 +553,7 @@ We will specifically be focusing on mobile-based technologies.
 Mobile-based technologies allow users to log their dietary-intake in real time using a smartphone or a tablet.
 This allows for higher quality control of the data.\parencite{faoun}
 \subsection{Dietary Goals}
-We couldn't find any resource that shows a collection of dietary goals that are collectively agreed upon by nutrition scientist.
+We couldn't find any resource that shows a collection of dietary goals that are agreed upon by nutrition scientist.
 However, popular dietary health applications such as MyFitnessPal and Fitbit implement three main dietary goals:
 
 Lose weight

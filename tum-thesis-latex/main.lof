@@ -7,47 +7,47 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Example Finite-State Automata as Control-Structure}}{12}{figure.caption.23}
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Example Finite-State Automata as Control-Structure}}{11}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces A Support Vector Machine \parencite {svm_pic}\relax }}{15}{figure.caption.27}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Control Structure for Meal Logging}}{19}{figure.caption.37}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Control Structure for Removing Entries}}{20}{figure.caption.39}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Control Structure for User Registration}}{21}{figure.caption.41}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Control Structures for Changing Timezone and Goal}}{21}{figure.caption.42}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces Control Structure for Sending Messages and Asking for Feedback}}{21}{figure.caption.43}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Control Structure for the Entire System}}{22}{figure.caption.44}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Regular Expression for Extracting Entry Type}}{23}{figure.caption.46}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Regular Expression for Extracting Absolute Temporal Expressions}}{23}{figure.caption.47}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Regular Expression for Extracting Relative Temporal Expressions}}{24}{figure.caption.48}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Regular Expression for User Intent}}{25}{figure.caption.49}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Screenshot Showing Available Commands for the Chatbot\relax }}{27}{figure.caption.56}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Screenshot Showing an Inline Keyboard\relax }}{27}{figure.caption.56}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Cropping Function for Time Values}}{30}{figure.caption.73}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces Function for Feature Extraction}}{32}{figure.caption.76}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces A Support Vector Machine \parencite {svm_pic}\relax }}{14}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Distribution of Entries per User\relax }}{37}{figure.caption.81}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Control Structure for Meal Logging}}{18}{figure.caption.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Eating Patterns of the Most Active Three Users\relax }}{38}{figure.caption.82}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Control Structure for Removing Entries}}{19}{figure.caption.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Best Scoring Models and the Corresponding $R^2$ Scores\relax }}{39}{figure.caption.83}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Control Structure for User Registration}}{20}{figure.caption.41}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Control Structures for Changing Timezone and Goal}}{20}{figure.caption.42}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces Control Structure for Sending Messages and Asking for Feedback}}{20}{figure.caption.43}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Control Structure for the Entire System}}{21}{figure.caption.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Regular Expression for Extracting Entry Type}}{22}{figure.caption.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Regular Expression for Extracting Absolute Temporal Expressions}}{22}{figure.caption.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Regular Expression for Extracting Relative Temporal Expressions}}{23}{figure.caption.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces Regular Expression for User Intent}}{24}{figure.caption.49}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Screenshot Showing Available Commands for the Chatbot\relax }}{25}{figure.caption.55}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Screenshot Showing an Inline Keyboard\relax }}{25}{figure.caption.55}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Cropping Function for Time Values}}{29}{figure.caption.72}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces Function for Feature Extraction}}{30}{figure.caption.74}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Distribution of Entries per User\relax }}{35}{figure.caption.80}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Eating Patterns of the Most Active Three Users\relax }}{36}{figure.caption.81}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Best Scoring Models and the Corresponding $R^2$ Scores\relax }}{37}{figure.caption.82}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

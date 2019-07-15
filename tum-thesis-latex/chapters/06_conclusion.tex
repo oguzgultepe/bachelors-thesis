@@ -8,14 +8,13 @@ In the next section, we will be going over some possible future work on this top
 \subsection{Solving the Initial Lack of Data}
 One of the biggest problems concerning our system is the initial lack of data.
 This lack of data prevents predictive functionality until the user logs enough entries.
-However, there might be some possible solutions to this problem.
+However, there might be some solutions to this problem.
 
-One possible solution would be to ask the users do describe their eating habits at registration.
-This information could be used for initial values for time prediction, which could be optimized over time as the user logs more entries.
+One possible solution would be to ask the users to describe their eating habits at registration.
+This information could be used as initial values for time prediction, which could be optimized over time as the user logs more entries.
 
 Another possibility is to use a clustering algorithm in order to categorize users' eating patterns.
-During the registration phase, the new users would answer a series of questions about their eating patterns.
-Users would be categorized based on their answers.
+During the registration phase, the new users would answer a series of questions about their eating patterns and would get categorized based on their answers.
 After the categorization, randomly sampled data from the other users in the same category could be used to train an initial predictive model for the user.
 
 It is also possible to combine these two approaches by categorizing the users based on eating patterns, but still consulting the user about concrete meal times.
@@ -23,7 +22,7 @@ It is also possible to combine these two approaches by categorizing the users ba
 These systems could be evaluated by comparing how well the initial predictive model approximates the late stage predictive model trained on the actual user data.
 
 \subsection{Reminders}
-One missing component of out dialog agent that is much desired is the ability to send reminders.
+One missing component of our dialog agent that is much desired is the ability to send reminders.
 While sending a reminder is easy, timing and frequency of reminders is not as trivial.
 One possible approach would be to base the reminders on the predictions.
 If the user doesn't log anything for a certain time after a prediction, a reminder could be sent.
@@ -37,7 +36,7 @@ These questions could be answered by asking the user for feedback on the reminde
 The user could rate the appropriateness of the reminder,
 and the reminder component could be iteratively optimized based on these ratings.
 
-The resulting component could be evaluated based on the number of reminders that received good ratings.
+The resulting component could be evaluated based on the number of reminders that receives good ratings.
 
 \subsection{Better Notification Timing}
 We focus on sending users notifications when they are about to eat.

@@ -474,11 +474,11 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/adobe/palatino/pplri9e.vf
 INPUT chapters/01_introduction.tex
 INPUT chapters/01_introduction.tex
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplb9e.tfm
+INPUT chapters/02_theoretical_background.tex
+INPUT chapters/02_theoretical_background.tex
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/adobe/palatino/pplb9e.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm
-INPUT chapters/02_theoretical_background.tex
-INPUT chapters/02_theoretical_background.tex
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplb9e.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd

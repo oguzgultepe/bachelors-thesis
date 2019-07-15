@@ -2,5 +2,33 @@
 
 \chapter{Introduction}\label{chapter:introduction}
 
-\section{Nutrition and Health Technology}
+\section{Why did we build this system?}
+Why did we build this system?\\ 
+Why did we need it?\\
+The answer is actually rather straight forward:\\
+Because we tend to forget about our convictions when we are hungry.\\
+We all set dietary goals, but only a few of us follow through with them.\\
+This is why we are impressed when we meet people who have followed through with their goals.\\
+Because following through with your goals is actually hard.\\
+But what if there was a system that could remind you of your goals just before you ate?
+A system that could learn your dietary patterns and intevene when you need it to?\\
+We have built this system as an answer to this question, and this thesis documents the building process.
+
 \section{Goal and Structure of the Thesis}
+The goal of this thesis is to explain the process of building and evaluating a system that learns a user's dietary patterns.
+We first build a chatbot that enables users to log their eating patterns.
+Next, we build a machine learning pipeline that takes a user's dietary data and uses it to train predictive models.
+Using these models we predict when the user is going to eat again.
+We start sending the user messages at the predicted times, and ask for feedback on the timing.
+The system fine tunes the timing based on this feedback.
+
+After building the system, we ask some volunteers to use it.
+The volunteers use the system for some time and afterwards, we take a look at how the system performed.
+
+In order to build this system, we first need to be familiar with some natural language processing and machine learning concepts.
+We explain these concepts in chapter 2.
+Afterwards, in chapter 3, we show how we build the system based on this information.
+Next, at Chapter 4, we take a look at the data collected by our system and the models trained on this data.
+At Chapter 5, we discuss the collected data, the user feedback on the chatbot and the trained models.
+Finally, at Chapter 6, we mention some possible improvements on this work.
+

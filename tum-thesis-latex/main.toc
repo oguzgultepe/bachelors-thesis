@@ -73,7 +73,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Nutrition}{17}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Dietary Assesment}{17}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.1}Dietary Assessment}{17}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}Dietary Goals}{17}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
@@ -105,7 +105,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Picking up a date for entry removal}{26}{section*.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Picking up a time for entry removal}{28}{section*.59}
+\contentsline {paragraph}{\nonumberline Picking up a time for entry removal}{26}{section*.59}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Getting Feedback on Notification Timing}{28}{section*.60}
 \defcounter {refsection}{0}\relax 
@@ -133,13 +133,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Machine Learning}{30}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Preprocesseing}{30}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.1}Preprocessing}{30}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Cleaning the Data}{30}{section*.72}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Feature Extraction}{31}{section*.74}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Training and Test Set Seperation}{34}{section*.78}
+\contentsline {subsubsection}{\nonumberline Training and Test Set Separation}{34}{section*.78}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Feature and Target Scaling}{34}{section*.79}
 \defcounter {refsection}{0}\relax 

@@ -20,15 +20,15 @@ These patterns are useful for searching in text.
 A regular expression search function finds every instance of text in the corpus that belongs to the pattern's implicit set.
 These instances are said to be 'matched' by the pattern.
 
-Regular expressions are supported in every computer language, word processor and text procesing tool. 
-However, there may be differeces in how they treat certain expressions. 
+Regular expressions are supported in every computer language, word processor and text processing tool. 
+However, there may be differences in how they treat certain expressions. 
 As the knowledge provided here is based on \parencite{nlp_re}, we will be treating expressions as they are shown there.
 Another thing to keep in mind is that this is not a comprehensive guide for regular expression. 
 We will be looking at basics and some more complex operators we need for our specific problem. 
 
 \subsubsection{Basic Regular Expression Patterns}
 Simplest regular expressions are sequences of characters. 
-For example \texttt{snack} matches any string that contains the sequnce 'snack'. 
+For example \texttt{snack} matches any string that contains the sequence 'snack'. 
 Here are some examples that would be matched by this regular expression:\\
 "I just had a small \underline{snack}."\\
 "His username was 123\underline{snack}o."\\
@@ -39,7 +39,7 @@ The period \texttt{.} is treated as a special character: the wildcard.
 It matches any character, so for example \texttt{r.n} matches:\\
 "I \underline{ran} 5k today."\\
 "You better \underline{run}."\\
-Another special charcter is the question mark: \texttt{?}
+Another special character is the question mark: \texttt{?}
 Adding a question mark after an element makes the element optional. 
 For example, \texttt{hours?} matches:\\
 "The \underline{hour} arm of the clock was missing."\\
@@ -63,7 +63,7 @@ For example, \texttt{Inc\textbackslash.} matches:\\
 
 \subsubsection{Square Brackets, Range and Negation}
 
-It is important to note that regular expressions are case sensetive, so \texttt{meal} matches the first example, but not the second:\\
+It is important to note that regular expressions are case sensitive, so \texttt{meal} matches the first example, but not the second:\\
 "We had a tasty \underline{meal}."\\
 "Meal is ready."\\
 This problem is solved by the use of square brackets:\texttt{[]}.
@@ -122,14 +122,14 @@ So \texttt{\^{}I|\textbackslash?\$} matches any sentence that either starts with
 "\underline{I} thought we were gonna eat together."\\
 "Are you available for lunch \underline{?}\\
 We have two more anchors that we can make use of:
-\texttt{\textbackslash b} to match word boundries and \texttt{\textbackslash B} to match non-boundries.
+\texttt{\textbackslash b} to match word boundaries and \texttt{\textbackslash B} to match non-boundaries.
 For example, \texttt{\textbackslash bsnack\textbackslash b} matches the first sentence, but not the second:\\
 "I just had a small \underline{snack}."\\
 "His username was 123snacko."\\
 To use these anchors, it is important to understand what a word means.
 In terms of regular expressions, a word is defined as any sequence of digits, letters or underscores.
 So \texttt{\textbackslash bap\textbackslash b} would match 'A\$\underline{ap}'.
-As \$ is neither a digit or a letter or underscore, it is treated as a word boundry.
+As \$ is neither a digit or a letter or underscore, it is treated as a word boundary.
 
 \begin{table}[htbp]
   \caption[Regular Expression Disjunction and Anchors]{Disjunction and Anchors}\label{tab:re_da}		
@@ -139,30 +139,30 @@ As \$ is neither a digit or a letter or underscore, it is treated as a word boun
     \texttt{eat|ate}&'eat' or 'ate'&I just \underline{ate}.\\ \hline
     \texttt{\^{}\textbackslash .}&Any character at the start of a line&\underline{I} just ate.\\ \hline
     \texttt{\textbackslash .\$}&Any character at the end of a line&I just ate\underline{.}\\ \hline
-    \texttt{\textbackslash b59\textbackslash b}&'59' between word boundries&It costs \$\underline{59}.99.\\ \hline
-    \texttt{\textbackslash B59\textbackslash B}&'59' between non-boundries&It costs \$2\underline{59}9.\\ \hline
+    \texttt{\textbackslash b59\textbackslash b}&'59' between word boundaries&It costs \$\underline{59}.99.\\ \hline
+    \texttt{\textbackslash B59\textbackslash B}&'59' between non-boundaries&It costs \$2\underline{59}9.\\ \hline
   \end{tabular}
 \end{table}
 
 \subsubsection{Kleene Operators, Grouping and Precedence}
 
-There are cases where we need to match repetetive patterns.
-For example, we might want to match any 'hey' with an arbitary amount of 'y's.
+There are cases where we need to match repetitive patterns.
+For example, we might want to match any 'hey' with an arbitrary amount of 'y's.
 To do this, we can use the Kleene Star \texttt{*}.
-Kleene star means "0 or more occurrences of the preceeding element".
+Kleene star means "0 or more occurrences of the preceding element".
 This means \texttt{y*} matches '','y','yy' and any other number of 'y' characters.
-So in order to match any 'hey' with an arbitary amount of 'y's, we would use \texttt{heyy*}.
+So in order to match any 'hey' with an arbitrary amount of 'y's, we would use \texttt{heyy*}.
 This use, however, is so common that we have another operator for it: the Kleene Plus \texttt{+}.
-Kleene Plus means "1 or more occurrences of the preceeding element".
+Kleene Plus means "1 or more occurrences of the preceding element".
 So \texttt{heyy*} and \texttt{hey+} are functionally equal.
 
-But what if we need to match a phrase such as as 'hahaha', which consists of an arbitary number of 'ha's?
-\texttt{ha+} would not work, because the Kleene operator works on the preceeding element.
-So how can we set 'ha' as the preceeding element?
+But what if we need to match a phrase such as as 'hahaha', which consists of an arbitrary number of 'ha's?
+\texttt{ha+} would not work, because the Kleene operator works on the preceding element.
+So how can we set 'ha' as the preceding element?
 
 This is where grouping comes into play.
-In regular expressions, grouping is done by wrapping a phrase in parantheses. 
-From then on, the phrase inside the parantheses is treated as a singular entity by operators outside the parantheses.
+In regular expressions, grouping is done by wrapping a phrase in parentheses. 
+From then on, the phrase inside the parentheses is treated as a singular entity by operators outside the parentheses.
 \texttt{(ha)+} matches any 'ha', 'haha' and any number of repetitions of the phrase 'ha'.
 
 Grouping also comes in handy when using the disjunction operator.
@@ -170,7 +170,7 @@ For example, let's assume we need a regular expression that matches 'hour', 'min
 We ca not use \texttt{hour|minutes?}, because the disjunction is between \texttt{hour} and \texttt{minutes?}
 This is because the \texttt{?} is evaluated first, then the sequences and only then the disjunction. 
 Instead, we can use \texttt{(hours|minute)s?}. 
-This expression works since the parantheses are evaluated before all the other operators.
+This expression works since the parentheses are evaluated before all the other operators.
 
 The collection of rules determining which operator is evaluated first is called the operator precedence hierarchy.
 An operator x is said to have precedence over another operator y, if x is to be evaluated before y.
@@ -180,7 +180,7 @@ Regular expression operator precedence hierarchy is as follows, from highest pre
   \caption[Regular Expression Operator Precedence Hierarchy]{Regular Expression Operator Precedence Hierarchy}\label{tab:re_oph}
   \centering
   \begin{tabular}{l l l}
-    Parantheses&\texttt{()}&\\ \hline 
+    Parentheses&\texttt{()}&\\ \hline 
     Counters&\texttt{* + ?}&\\ \hline 
     Sequences and anchors&\texttt{seq \^{}I \textbackslash.\$}&\\ \hline 
     Disjunction&\texttt{|}&\\ \hline 
@@ -204,12 +204,12 @@ Regular expression operator precedence hierarchy is as follows, from highest pre
 Let's assume we have a list of names and we want to make sure all the names occur only once in the list. 
 The following regular expression accomplishes that:\\
 \texttt{\textbackslash b([A-Z][a-z]*)\textbackslash b.*\textbackslash b\textbackslash1\textbackslash b}\\
-When we use parantheses for grouping, the text that matches the expression inside is stored in the memory.
+When we use parentheses for grouping, the text that matches the expression inside is stored in the memory.
 This stored text is referred to as a capture group.
 Capture groups are numbered from left to right and can be referenced by the use of a backslash, followed by the group number. 
 
 When we need to group expressions but do not want to store the matches in the memory, we can use non-capturing groups.
-Adding \texttt{?:} after the opening paranthesis makes a group non capturing.
+Adding \texttt{?:} after the opening parenthesis makes a group non capturing.
 
 \subsection{Information Extraction}
 We have mentioned that massive amount of information is expressed in natural languages.
@@ -283,7 +283,7 @@ Finally, we will end this subsection on control structures for such dialog agent
 The knowledge provided in this subsection is based on \parencite{nlp_chatbots}.
 
 \subsubsection{Task-Oriented Dialog Agents vs Chatbots}
-The words chatbot and dialog agents are often used interchangably by many people.
+The words chatbot and dialog agents are often used interchangeably by many people.
 However, in the context of NLP, this is a mistake.
 In NLP, chatbots refer to a distinct class of dialog agents, the other class being task-oriented dialog agents.
 So what is the difference between the two classes? 
@@ -301,7 +301,7 @@ What is a frame based dialog agent?
 In order to answer this question, we first need to understand some concepts.
 
 Domains are specific areas of knowledge or activity such as computer science or fishing.
-Domains are modelled by abstract constructs called domain ontologies.
+Domains are modeled by abstract constructs called domain ontologies.
 A domain ontology defines concepts and relations that belong to a domain.
 
 We build frames based on domain ontologies.
@@ -324,7 +324,7 @@ Dialog agents that are based on such frames are called frame based dialog agents
 \end{table}
 
 \subsubsection{Control Structure for Frame Based Dialog}
-A task-oriented dialog agent needs to gather appopriate data to accomplish the task at hand.
+A task-oriented dialog agent needs to gather appropriate data to accomplish the task at hand.
 In order to achieve this, dialog systems implement control structures that guide the conversation.
 For a frame base dialog agent, the control structure is built around the frame.
 These control structures are usually finite-state automatas that are hand-designed for the task. 
@@ -345,7 +345,7 @@ First, for each slot, we come up with an associated question that elicits an ans
   \end{tabular}
 \end{table}
 
-Based on these questions, we build a finites-state automata to guide the conversation.
+Based on these questions, we build a finite-state automata to guide the conversation.
 In this automata, questions are the states and user's answers are the transitions.
 Take a look at \autoref{fig:control} for an example finite-state automata that is built based on the questions at \autoref{tab:questions}.
 
@@ -396,9 +396,9 @@ However, such systems offer the user no flexibility.
 Consider the following input from the user:\\
 "I would like reserve a table at L'Osteria for tomorrow"\\
 This sentence already includes the information needed to fill two slots: Restaurant and Reservation Date.
-It is possible to augment a dialgo system with the ability to recognize such inputs, allowing for multiple slots to be filled at once.
+It is possible to augment a dialog system with the ability to recognize such inputs, allowing for multiple slots to be filled at once.
 Such a system would pose the user questions for the empty slots, and simply skip the questions for the filled ones.
-These systems are called mixed-initiatives, as the user also holds some inititive to control the conversation.
+These systems are called mixed-initiatives, as the user also holds some initiative to control the conversation.
 \newpage
 \section{Machine Learning}
 Machine Learning is the science (and art) of programming computers so they can learn from data. \parencite{ml:homl}
@@ -411,7 +411,7 @@ Here we will be focusing on supervised learning; learning from labeled data.
 
 \subsection{Basics of Machine Learning}
 How does a program learn from labeled data?
-Assume we have a dataset consisting of N input-output pairs such as the following:
+Assume we have a data set consisting of N input-output pairs such as the following:
  
 $(x_1,y_1), (x_2,y_2), \ldots, (x_n,y_n)$
 
@@ -432,7 +432,7 @@ In this context, training means tuning the adaptive parameters of a model in ord
 
 We are of course interested in models that are capable of explaining more than just the training data.
 We want to see if the model generalizes well; if it can accurately predict labels for previously unseen inputs.
-Becuase of this we test the trained models on heldout data.
+Because of this we test the trained models on held out data.
 Usually, we split our data into three distinct sets: training set, validation set, and test set.
 We train our models on the training set, compare them using the validation set and report the performance of the final model on the test set.
 It is important that the test set is held out during the training phase.
@@ -441,9 +441,9 @@ Otherwise it is not possible to see if the model generalizes well or just memori
 \subsection{Relevant Models}
 Let's take a brief look at some popular machine learning models.
 \subsubsection{Linear Regression}
-A linear regression model is a linear function of the input variabes.
+A linear regression model is a linear function of the input variables.
 It corresponds to a weighted sum of the input features plus a constant called the bias term.\parencite{homl:4}
-For example, a linear regression model for a dataset with two input features would look like this:
+For example, a linear regression model for a data set with two input features would look like this:
 
 $f(x_i)=\theta_{0} + \theta_{1}x_{i1} + \theta_{2}x_{i2}=y_i$
 
@@ -460,7 +460,7 @@ Regularization strength is a hyperparameter, a parameter that is set before the 
 More information about ridge regression can be found at \parencite{homl:4}
 
 \subsubsection{Support Vector Machines}
-Support Vector Machines construct hyperplanes that act as decision boundries between classes.
+Support Vector Machines construct hyperplanes that act as decision boundaries between classes.
 What makes these hyperplanes special is that they are positioned to be as far away as possible from the closest data points.
 The closest data points therefore determine where the hyperplane lays, and are called the support vectors. \parencite{homl:5}
 
@@ -471,7 +471,7 @@ The closest data points therefore determine where the hyperplane lays, and are c
 	\label{fig:svm}
 \end{figure}
 
-This is all better understood with some visualisation. 
+This is all better understood with some visualization. 
 Please take a look at \autoref{fig:svm}.
 It is easy to see in this picture that the hyperplane is positioned to maximize the margin between the support vectors.
 It is also important to realize that the data points that are not support vectors do not affect the hyperplane in any way. \parencite{homl:5}
@@ -534,7 +534,7 @@ Hyperparameter optimization refers to the process of fine tuning the model hyper
 This is usually done automatically using grid-search.\parencite{homl:2} 
 
 \subsubsection{$R^2$ Score}
-$R^2$ Score (pronounced R squared) or the coefficent of determination is statistical metric.
+$R^2$ Score (pronounced R squared) or the coefficient of determination is statistical metric.
 In most simple terms, $R^2$ score shows how much of the variance in the target values can be explained by a statistical model.
 It can be used to evaluate models, where a higher score indicates a better fit on data.
 Best possible $R^2$ score is 1.0.
@@ -542,13 +542,13 @@ $R^2$ score can be negative too, indicating that the model is arbitrarily worse.
 
 
 \section{Nutrition}
-\subsection{Dietary Assesment}
-Food and Agriculture Organization of United Nations defines dietary assesment as the following:
+\subsection{Dietary Assessment}
+Food and Agriculture Organization of United Nations defines dietary assessment as the following:
 
 ``Dietary assessment is an evaluation of food and nutrient intake and dietary pattern of an individual or individuals in the household or population group over time.''
 \parencite{faoun}
 
-There are many different dietary assesment methods available, but we will be focusing on integration of innovative technologies to improve dietary assesment.
+There are many different dietary assessment methods available, but we will be focusing on integration of innovative technologies to improve dietary assessment.
 We will specifically be focusing on mobile-based technologies.
 Mobile-based technologies allow users to log their dietary-intake in real time using a smartphone or a tablet.
 This allows for higher quality control of the data.\parencite{faoun}

@@ -4,8 +4,8 @@
 Our goal here is to build a system that is capable of accurately predicting when the user is going to eat.
 This can be achieved by building predictive models and training them on user data.
 But, in order to this, we first need to collect data on user's eating patterns.
-This process is called dietary assesment.
-There are many methods for dietary assesment.
+This process is called dietary assessment.
+There are many methods for dietary assessment.
 Here, we will be focusing on a mobile-based solution:
 We will build a dialog agent that allows for instant logging of a user's dietary intake.
 Afterwards, using the gathered data, we will build a machine learning pipeline that predicts the time of the next entry.
@@ -18,7 +18,7 @@ The task is to understand the eating patterns of the user and make future predic
 Let's take a look at our task from a frame-based perspective.
 What information do we need from the user in order to accomplish this task?
 There are many answers to this question with varying complexity.
-Keeping the scope of the thesis in mind, we contruct a simple frame shown in \autoref{tab:main_frame}
+Keeping the scope of the thesis in mind, we construct a simple frame shown in \autoref{tab:main_frame}
 
 \begin{table}[htbp]
   \caption[Frame for Logging Dietary Intake]{Frame for Logging Dietary Intake}\label{tab:main_frame}
@@ -34,7 +34,7 @@ Keeping the scope of the thesis in mind, we contruct a simple frame shown in \au
 
 Now we need to come up with a question for every slot in the frame.
 \autoref{tab:logging_questions} shows these questions.
-We don't assign questions to User Id and Meal Date slots, as they are meant to be infered from the context.
+We don't assign questions to User Id and Meal Date slots, as they are meant to be inferred from the context.
 
 \begin{table}[htbp]
   \caption[Question for Logging Dietary Intake]{Questions for Logging Dietary Intake}\label{tab:logging_questions}
@@ -131,7 +131,7 @@ The dietary goal is represented as an integer, corresponding to:
 
 0: Lose Weight
 
-1: Mainting Weight
+1: Maintain Weight
 
 2: Gain Weight
 
@@ -157,7 +157,7 @@ Based on \autoref{tab:reg_frame}, we construct the control structure shown in \a
   \scalebox{0.5}{
   \begin{tikzpicture}[control]
     \node (0) {Start};
-    \node (1) [below =of 0] [state] {Plese share your location with me so I can find your timezone.};
+    \node (1) [below =of 0] [state] {Please share your location with me so I can find your timezone.};
     \node (2) [below =of 1] [state] {Please select your goal.};
     \node (3) [below =of 2] {Register User};
     \path[->]
@@ -168,7 +168,7 @@ Based on \autoref{tab:reg_frame}, we construct the control structure shown in \a
 \end{figure}
 
 
-We also contruct two more control structres, for changing timezone and goal settings, shown in \autoref{fig:change_control}
+We also construct two more control structures, for changing timezone and goal settings, shown in \autoref{fig:change_control}
 
 \begin{figure}[htbp]
   \centering
@@ -182,7 +182,7 @@ We also contruct two more control structres, for changing timezone and goal sett
                       shorten >=1pt,
                       auto]
     \node (0) {Start};
-    \node (1) [below =of 0] [state, text width=5cm] {Plese share your location with me so I can find your timezone.};
+    \node (1) [below =of 0] [state, text width=5cm] {Please share your location with me so I can find your timezone.};
     \node (2) [below =of 1] {Change Timezone};
     \node (3) [right =of 0, xshift=3cm] {Start};
     \node (4) [below =of 3] [state] {Please select your goal.};
@@ -221,7 +221,7 @@ Bringing all these control structures together, we end up with a final structure
   \scalebox{0.6}{
   \begin{tikzpicture}[control]
     \node (0) {Start};
-    \node (1) [below =of 0] [state] {Plese share your location with me so I can find your timezone.};
+    \node (1) [below =of 0] [state] {Please share your location with me so I can find your timezone.};
     \node (2) [below =of 1] [state] {Please select your goal.};
     \node (3) [below =of 2] {Register User};
     \node (4) [below =of 3] [state] {Idle};
@@ -235,11 +235,11 @@ Bringing all these control structures together, we end up with a final structure
     \node (12) [right =of 6] [state] {What was the date of this entry?};
     \node (13) [above=of 12] [state] {What was the time of this entry?};
     \node (14) [above =of 13] {Remove Entry};
-    \node (15) [above left =of 7] [state, text width=5cm] {Plese share your location with me so I can find your timezone.};
+    \node (15) [above left =of 7] [state, text width=5cm] {Please share your location with me so I can find your timezone.};
     \node (16) [above =of 15] {Change Timezone};
-    \node (17) [left =of 8] [state, text width=5cm] {Plese select your goal.};
+    \node (17) [left =of 8] [state, text width=5cm] {Please select your goal.};
     \node (18) [above =of 17] {Change Goal};
-    \node (19) [right =of 4, xshift=2cm] [state] {Please rate the timining of this message.};
+    \node (19) [right =of 4, xshift=2cm] [state] {Please rate the timing of this message.};
     \path[->]
       (0) edge (1)
       (1) edge node [swap, midway] {Timezone acquired} (2)
@@ -295,7 +295,7 @@ type_pattern = r'''\b
   \label{fig:re_type}
 \end{figure}
 
-This regular expression matches a word from a set of words between word boundries.
+This regular expression matches a word from a set of words between word boundaries.
 If the matched word is meal, breakfast, lunch or dinner; the extracted type is set to meal.
 If the matched word is snack, small, little or few; the extracted type is set to snack.
 
@@ -354,16 +354,16 @@ we will be referring to the regular expressions as extractors.
 
 Absolute time extractor matches any phrase that has a hour part; a single or double digit number between 0 and 23.
 It also optionally matches a minutes part; a single or double digit number between 0 and 59.
-The hours and minutes parts need to be seperated by a delimiter; either a colon, a period or a space.
+The hours and minutes parts need to be separated by a delimiter; either a colon, a period or a space.
 After the hours and minutes parts, if there is a phrase signifying 12 hour format (am-pm), the phrase is also matched.
-Alternatively, the extractor also matches military time; a four digit representation where the first two digits signigy hours and last two digits signify minutes. (e.g 2000)
+Alternatively, the extractor also matches military time; a four digit representation where the first two digits signify hours and last two digits signify minutes. (e.g 2000)
 
 Relative time extractor matches phrases followed by a trigger word.
 This word can be ago, before or prior.
-Preceeding the trigger word, hours part, minutes part or both can be matched.
+Preceding the trigger word, hours part, minutes part or both can be matched.
 Hours part is a single or double digit number between 0 and 24, followed by a word signifying hours (h, hours etc.).
-Minutes part is a single or double digit number between 0 and 99, followed by a word singifying minutes (min, minutes etc.).
-Additionally, the extractor also matches the word 'half' if it preceeds the hours part.
+Minutes part is a single or double digit number between 0 and 99, followed by a word signifying minutes (min, minutes etc.).
+Additionally, the extractor also matches the word 'half' if it precedes the hours part.
 After the extraction, relative time is normalized based on the user's timezone.
 
 When we get a message from the user, we first run the relative time extractor on the text.
@@ -373,7 +373,7 @@ However, relative time extractor involves trigger words.
 This means that if the relative time extractor matches a phrase, it is safe to assume that the phrase is a relative temporal expression.
 
 We have a final regular expression shown in \autoref{fig:re_log}
-We use this expresssion to determine if a user is trying to log an entry.
+We use this expression to determine if a user is trying to log an entry.
 
 \begin{figure}[htpb]
   \centering
@@ -388,7 +388,7 @@ r'''\b
   \label{fig:re_log}
 \end{figure}
 
-Similar to the type expression, this expression matches a word from a set of words between word boundries.
+Similar to the type expression, this expression matches a word from a set of words between word boundaries.
 The words that can be matched are; eat, ate, eaten and food.
 We use this expression only if both time and type expressions fail to match anything.
 This is because if the previous expressions match a phrase, then the intent is already established.
@@ -400,7 +400,7 @@ Instead of focusing on application design, we can fully focus on our dialog agen
 We build our dialog agent using Python 3 and python-telegram-bot library, which provides a python interface for Telegram Bot API.
 
 In the previous subsection, we have mentioned that we would be using some Telegram Bot API functionalities in order to make information extraction easier. 
-We will start this subsection by explaining these functionalites.
+We will start this subsection by explaining these functionalities.
 Next we will move on to the control structure of a Telegram chatbot.
 Finally, we will briefly mention some other libraries that are also used in our implementation.
 \subsubsection{python-telegram-bot Library}
@@ -408,7 +408,7 @@ Finally, we will briefly mention some other libraries that are also used in our 
 There are some Telegram Bot functionalities that we make use of in order to make information extraction easier.
 First of those are the chatbot commands.
 Telegram Bot API allows user to perform actions via commands.
-A command is a string of alphanumerical characters and underscores, all of which is preceeded by a '/' character.
+A command is a string of alphanumerical characters and underscores, all of which is preceded by a '/' character.
 For example, '/help', '/set\_nickname' or '/command3' or all viable commands.
 In our system, we use commands to start any operation other than logging an entry.
 We implement a total of four commands:
@@ -457,7 +457,7 @@ We send an interactive calendar built as an Inline-Keyboard.
 When a user selects a date, we receive a datetime object corresponding to the date selected.
 We use \texttt{telegramcalendar.py} script in order to create these interactive calendars.
 \texttt{telegramcalendar.py} script is written by Github user unmonoqueteclea.
-The repository contatining the script can be seen at:
+The repository containing the script can be seen at:
 
 \texttt{https://github.com/python-telegram-bot/python-telegram-bot}
 
@@ -466,7 +466,7 @@ After the date selection, we send the user an Inline-Keyboard with buttons conta
 When the user picks a time, we get the string representation of the time selected.
 
 \paragraph{Getting Feedback on Notification Timing} 
-When we send a message at a predicted time, we also send a Inline-Keyboard for feeback.
+When we send a message at a predicted time, we also send a Inline-Keyboard for feedback.
 This keyboard contains five buttons: Too Early, Early, On Time, Late and Too Late.
 When the user presses a button, we get an integer corresponding to the button pressed.
 
@@ -477,7 +477,7 @@ When we receive the location, we use it to find user timezone.
 
 \subsubsection{Control Structure}
 Telegram chatbots are mainly controlled by Updater and Dispatcher objects.
-Updater object receieves updates from Telegram and passes them to the Dispatcher object.
+Updater object receives updates from Telegram and passes them to the Dispatcher object.
 Dispatcher object, in turn, passes the update to the suitable Handler objects.
 
 Each Handler object accepts a predefined set of updates, and passes these updates to the associated functions, which then process the update.
@@ -507,12 +507,12 @@ We implement a total of 5 conversation handlers:
 \paragraph{Registration} This conversation handler has the /start command handler as its entry point. 
 It contain two states, one that asks for the user's timezone and the other that asks for the user's goal.
 The handler that corresponds to the first state is a message handler, filtering for messages containing locations.
-The handler that corresponds to the second state is callback query handler, intented to process the user's goal selection.
+The handler that corresponds to the second state is callback query handler, intended to process the user's goal selection.
 There is also another message handler that accepts any message as a fallback.
 This handler reminds the user that the registration needs to be completed in order to continue.
 
 \paragraph{Changing Timezone} This conversation handler has the /change\_timezone command handler as its entry point.
-It contains only one state, which coressponds to a message handler that filter for messages containing locations.
+It contains only one state, which corresponds to a message handler that filter for messages containing locations.
 The fallback handler for this one accepts any message and cancels the operation, returning the chatbot to the idle state.
 This handler cancels the current operation and returns the chatbot to the idle state.
 
@@ -528,7 +528,7 @@ This conversation handler also has a fallback handler that cancels the operation
 \paragraph{Meal Logging} This conversation handler is unique in the way that it has a message handler as an entry point.
 It has three states, all of which are message handlers that filter for text messages.
 The first one is the same as the entry point.
-The second one is intended to extract type, and the thirds one is intened to extract time.
+The second one is intended to extract type, and the thirds one is intended to extract time.
 When a user sends a text message, the initial handler tries to extract the time and the type of the entry.
 If it extracts both, the entry is saved into the database
 If it extracts only one, it transitions into other state based on the missing information.
@@ -551,16 +551,16 @@ Finally, for converting timezone information stored as text into timezone object
 
 \section{Machine Learning}
 In this section, we will go through the machine learning component of our system.
-Much like any machine learning pipelin, we will start with data preprocessig.
+Much like any machine learning pipeline, we will start with data preprocessing.
 Afterwards, we will take a look at the models used.
-Finally, we will end this section on model seleciton and prediction.
+Finally, we will end this section on model selection and prediction.
 
-We use pandas \parencite{pandas} and numpy \parencite{numpy} libraries for data manupilation.
+We use pandas \parencite{pandas} and numpy \parencite{numpy} libraries for data manipulation.
 For creating, training and testing our models, we use the scikit-learn \parencite{scikit-learn} library.
-\subsection{Preprocesseing}
+\subsection{Preprocessing}
 We will be going through some of the standard steps of preprocessing.
 \subsubsection{Cleaning the Data}
-Data neads to be cleaned before being fed into the model.
+Data needs to be cleaned before being fed into the model.
 We have to make sure that there are no rows with missing values,
 and that each column has the same data type for every row.
 
@@ -694,31 +694,31 @@ def feature_template(data):
 \end{figure}
 \newpage
 This function takes a numpy array containing the user data and returns two objects.
-The first object is pandas data frame, containing the feauture vectors and target values for every entry except the last one.
+The first object is pandas data frame, containing the feature vectors and target values for every entry except the last one.
 We use this data frame to train and test our models.
-The second object is a numpy array, contatining the feature vector for the the last entry.
+The second object is a numpy array, containing the feature vector for the the last entry.
 This array is meant to be used after model selection, in order to predict the time of the next entry for the user.
 
-\subsubsection{Training and Test Set Seperation}
-We need to seperate our data into training and test sets before the next step.
+\subsubsection{Training and Test Set Separation}
+We need to separate our data into training and test sets before the next step.
 We do this with the help of \texttt{train\_test\_split()} function from scikit-learn library.
-This function accepts an array of feature vectors (X), an array of target values (y), and a float value specfiying the size of the test set.
+This function accepts an array of feature vectors (X), an array of target values (y), and a float value specifying the size of the test set.
 It returns four arrays; X\_train, X\_test, y\_train and y\_test.
-We set our test size as $0.1$, meaining 10\% of the data is used for testing.
+We set our test size as $0.1$, meaning 10\% of the data is used for testing.
 
 \subsubsection{Feature and Target Scaling}
 After feature extraction, we end up with a feature vector.
 This feature vector mostly consists of small values; usually zeros or ones, and single digit numbers for two features.
 However, one feature, namely the time of entry, has a range between 0 and 1440.
-Most machine learning models perform better when the features are similaryly scaled.
+Most machine learning models perform better when the features are similarly scaled.
 Because of this, we need to rescale our features.
 
 We use \texttt{MinMaxScaler()} object from scikit-learn library for this task.
-This object transforms features by scaling each feature to a given range, where the default range is betwen 0 and 1.
+This object transforms features by scaling each feature to a given range, where the default range is between 0 and 1.
 It works like this: First, we fit the scaler to the data using the \texttt{fit()} function.
 Then we call \texttt{transform()} function on the data to scale our features.
 
-So why did we need to seperate our data before this step?
+So why did we need to separate our data before this step?
 Because fitting the scaler to the data means that the scaler learns the data.
 Good data science practice dictates that the test set must contain unseen data.
 As a result we fit the scaler to our training data, and then use it to transform both the training and the test data.
@@ -735,7 +735,7 @@ We use a total of 4 base models, all of which we create using scikit-learn libra
 Additionally we use 4 ensemble learners based on these 4 models.
 All of the models and their corresponding scikit-learn objects can be seen in \autoref{tab:models}
 \texttt{SVR() kernel} parameter is selected to keep the model linear.
-Other model parameters shown are selected based on trial and errork
+Other model parameters shown are selected based on trial and error.
 
 \begin{table}[htbp]
   \caption[Models]{Models}\label{tab:models}
@@ -755,7 +755,7 @@ Other model parameters shown are selected based on trial and errork
 
 We also perform 10 fold cross validation on every base model, and hyper parameter optimization on two base models using \texttt{GridSearchCV()} from scikit-learn library.
 We optimize the \texttt{'alpha'} parameter for the ridge regression between $0.5$ and $1.0$, 
-and the \texttt{'C'} parameter for SVM regresssion between $0.1$, $0.5$ and $1.0$.
+and the \texttt{'C'} parameter for SVM regression between $0.1$, $0.5$ and $1.0$.
 
 \subsection{Model Selection and Prediction}
 After preparing our data and model, we come to the model selection phase.
@@ -765,17 +765,18 @@ If there is, we set this model as the best model and the model score as the best
 If there is no stored model, we set the best model to \texttt{None} and the best score to $0$.
 
 Next, we create, train and test the previously mentioned eight models for a number of iterations.
-This number is set to $100$ if the best score is $0$, signiying that this is the first time that we train models for the user.
+This number is set to $100$ if the best score is $0$, signifying that this is the first time that we train models for the user.
 Otherwise, the number is set to 10.
 During an iteration, if we find a model performing better than the best model, we set this model as the best model and its score as the best score.
 After all the iterations are complete, we check the best model.
-If it is still set to \texttt{None}, this means that all the models scored less than $0$, most likely due to insufficent data.
+If it is still set to \texttt{None}, this means that all the models scored less than $0$, most likely due to insufficient data.
 In this case we make no prediction.
 Otherwise, we use the best performing model to predict the time until next entry.
+We scale the predicted value back using the target value scaler.
 After the prediction, we save the best performing model into our database.
 
 \subsection{Feedback Value}
-Eating is not an instantenous activity.
+Eating is not an instantaneous activity.
 When users report meal times, they can report any point in time that is within the duration of the eating activity.
 We use a feedback value to account for this.
 When we send a user a notification, we ask for a feedback on the timing.
@@ -787,7 +788,7 @@ We calculate the time of the next entry based on this final value.
 \subsection{Chatbot Integration}
 When a user logs a new entry, we call a function that contains the entire machine learning pipeline.
 This process doesn't take long due to small amount of data available and the simplicity of the models.
-We schedule a message at the precited time, and the system goes back to the idle state.
+We schedule a message at the predicted time, and the system goes back to the idle state.
 \section{Testing the System}
 We give access links to volunteers consisting of university students in order to test the system.
 The volunteers are asked to use the system for 15 days, and then give feedback on the experience.

@@ -1,7 +1,7 @@
 % !TeX root = ../main.tex
 
 \chapter{Conclusion}\label{chapter:conclusion}
-We have built a system that faciliates communcation with the user and makes somewhat accurate predictions.
+We have built a system that facilitates communication with the user and makes somewhat accurate predictions.
 However, there is a lot of room for improvement.
 In the next section, we will be going over some possible future work on this topic.
 \section{Future Work}
@@ -27,17 +27,17 @@ One missing component of out dialog agent that is much desired is the ability to
 While sending a reminder is easy, timing and frequency of reminders is not as trivial.
 One possible approach would be to base the reminders on the predictions.
 If the user doesn't log anything for a certain time after a prediction, a reminder could be sent.
-But what 'certain time' is appopriate for this task?
+But what 'certain time' is appropriate for this task?
 
 What about the frequency?
 While sending too few reminders is obviously not optimal, 
 sending too many reminders could easily agitate the users.
 
 These questions could be answered by asking the user for feedback on the reminders.
-The user could rate the appopriateness of the reminder,
+The user could rate the appropriateness of the reminder,
 and the reminder component could be iteratively optimized based on these ratings.
 
-The resulting component could be evaluated based on the number of reminders that recieved good ratings.
+The resulting component could be evaluated based on the number of reminders that received good ratings.
 
 \subsection{Better Notification Timing}
 We focus on sending users notifications when they are about to eat.
@@ -52,6 +52,6 @@ Such a model could be evaluated based on recall; number of accurately predicted 
 \subsection{Detailed Meal Logging}
 When logging a new entry, we only differentiate between meals and snacks.
 One improvement over this would be to let the user log exactly what they eat.
-The system would need to calculate the approximate nutritient intake for every entry,
+The system would need to calculate the approximate nutrient intake for every entry,
 and make recommendations on what to eat based on this information and the user goal.
 
